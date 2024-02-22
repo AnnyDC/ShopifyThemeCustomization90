@@ -129,7 +129,19 @@
         "settings": {
           "top_nav_menu": "heder-nav",
           "short_desc": "Need help? Call us:1",
+          "additional_text": "",
           "url_link": "tel:+ 00645 4568"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo.webp",
+          "header_main_menu": "",
+          "button_label": "All Categories",
+          "button_link": "shopify:\/\/collections",
+          "vendor_button_text": "",
+          "vendor_button_link": "#"
         }
       }
     },
