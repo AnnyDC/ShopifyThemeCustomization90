@@ -25,7 +25,7 @@
         <div class="logo">
           <a href="index.html">
             {%- if section.settings.logo != blank -%}
-              {{ lsection.settings.logo | image_url: width: 300 | image_tag }}
+              {{ section.settings.logo | image_url: width: 300 | image_tag }}
             {%- endif -%}
           </a>
         </div>
