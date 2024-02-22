@@ -128,7 +128,7 @@
         "type": "top-nav",
         "settings": {
           "top_nav_menu": "heder-nav",
-          "short_desc": "Need help? Call us:",
+          "short_desc": "Need help? Call us:1",
           "url_link": "tel:+ 00645 4568"
         }
       }
