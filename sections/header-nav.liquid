@@ -22,10 +22,14 @@
       {% endcomment %}
     </div>
     <div class="header-contact d-none d-lg-block">
-      <a href="#">
-        <span>Need help? Call us:</span>
-        <span class="contact-number">+ 00645 4568</span>
-      </a>
+      {%- if section.settings.url_link != blank -%}
+        <a href="{{ section.settings.url_link }}">
+          <span>
+            {%- if section.settings.short_desc != blank -%}{{ section.settings.short_desc }}{%- endif -%}
+          </span>
+          <span class="contact-number">{{ section.settings.contact_num }}</span>
+        </a>
+      {%- endif -%}
     </div>
   </div>
 </div>
@@ -38,15 +42,25 @@
   },
   "settings": [
     {
-      "type": "image_picker",
-      "id": "logo",
-      "label": "Logo image"
-    },
-    {
       "type": "link_list",
       "id": "navigation_menu",
       "label": "Nav Menu",
       "default": "heder-nav"
+    },
+    {
+      "type": "text",
+      "id": "short_desc",
+      "label": "Short Note"
+    },
+    {
+      "type": "number",
+      "id": "contact_num",
+      "label": "Contact Number"
+    },
+    {
+      "type": "url",
+      "id": "url_link",
+      "label": "URL Link"
     }
   ],
   "blocks": [],
