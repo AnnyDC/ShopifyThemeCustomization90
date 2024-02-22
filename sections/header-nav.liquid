@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="header-top">
+    <div class="header-profile">
+      {%- assign nav_menu_handle = section.settings.navigation_menu | default: 'heder-nav' -%}
+      {%- if nav_menu_handle != blank -%}
+        {%- assign nav_menu = linklist[nav_menu_handle] -%}
+        {%- for link in nav_menu.links -%}
+          <a
+            href="{{ link.url }}"
+            {% if link.active %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{ link.title }}
+          </a>
+        {%- endfor -%}
+      {%- endif -%}
+      {% comment %}
+         <a href="#"><span>Account</span></a>
+        <a href="#"><span>Track Order</span></a>
+        <a href="#"><span>Support</span></a>
+      {% endcomment %}
+    </div>
+    <div class="header-contact d-none d-lg-block">
+      <a href="#">
+        <span>Need help? Call us:</span>
+        <span class="contact-number">+ 00645 4568</span>
+      </a>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Header Top",
+  "class": "section-header-top",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "link_list",
+      "id": "navigation_menu",
+      "label": "Nav Menu",
+      "default": "heder-nav"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Header Top"
+    }
+  ]
+}
+{% endschema %}

@@ -80,7 +80,7 @@
     {{ content_for_header }}
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="">
     {% comment %}
        <a class="skip-to-content-link button visually-hidden" href="#MainContent">
         {{ 'accessibility.skip_to_text' | t }}
@@ -92,6 +92,7 @@
     {% endcomment %}
 
     {% comment %} {% sections 'header-group' %} {% endcomment %}
+    {% section 'header-nav' %}
     {% section 'header' %}
 
     {% comment %} <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1"> {% endcomment %}
