@@ -2,7 +2,7 @@
     <div class="container">
       <div class="header-top">
         <div class="header-profile">
-          {%- assign nav_menu_handle = section.settings.navigation_menu | default: 'heder-nav' -%}
+          {%- assign nav_menu_handle = section.settings.top_nav_menu | default: 'heder-nav' -%}
           {%- if nav_menu_handle != blank -%}
             {%- assign nav_menu = linklist[nav_menu_handle] -%}
             {%- for link in nav_menu.links -%}
@@ -43,7 +43,7 @@
   "settings": [
     {
       "type": "link_list",
-      "id": "navigation_menu",
+      "id": "top_nav_menu",
       "label": "Nav Menu"
 
     },
