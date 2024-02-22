@@ -606,7 +606,9 @@
                 <rect y="4" width="10" height="1" />
               </svg>
             </span>
-            <span class="list-text"> All Categories </span>
+            <span class="list-text">
+              {% if section.settings.button_label != blank %} {{ section.settings.button_label }} {% endif -%}
+            </span>
           </button>
           <div class="category-dropdown position-absolute" id="subMenu">
             <ul class="category-list">
@@ -838,7 +840,7 @@
           <ul class="menu-list">
             {% assign header_main_menu_handle = section.settings.header_main_menu | default: 'main-menu' %}
             {% assign main_menu = linklists[header_main_menu_handle] %}
-
+            {{ header_main_menu_handle }}
             {% for link in main_menu.links %}
               <li>
                 <a
@@ -1017,9 +1019,6 @@
 {
   "name": "Header",
   "class": "section-header",
-  "enabled_on": {
-    "groups": ["header"]
-  },
   "settings": [
     {
       "type": "image_picker",
@@ -1030,9 +1029,18 @@
       "type": "link_list",
       "id": "header_main_menu",
       "label": "Main Menu"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
     }
   ],
-  "blocks": [],
   "presets": [
     {
       "name": "Header"
