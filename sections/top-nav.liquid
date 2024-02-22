@@ -3,10 +3,9 @@
       <div class="header-top">
         <div class="header-profile">
           {% assign nav_menu_handle = section.settings.top_nav_menu | default: 'heder-nav' %}
-          {% if nav_menu_handle != blank %}
             {% assign nav_menu = linklist[nav_menu_handle] %}
             
-            {%- for link in nav_menu.links -%}
+            {% for link in nav_menu.links %}
               <a
                 href="{{ link.url }}"
                 {% if link.active %}
@@ -15,8 +14,7 @@
               >
                 {{ link.title }}
               </a>
-            {%- endfor -%}
-          {%- endif -%}
+            {% endfor -%}
           {% comment %}
             <a href="#"><span>Account</span></a>
             <a href="#"><span>Track Order</span></a>
