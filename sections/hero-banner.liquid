@@ -1,45 +1,62 @@
 <section id="hero" class="hero">
   <div class="swiper hero-swiper">
     <div class="swiper-wrapper hero-wrapper">
-      <div class="swiper-slide hero-slider-one">
-        <div class="container">
-          <div class="col-lg-6">
-            <div class="wrapper-section" data-aos="fade-up">
-              <div class="wrapper-info">
-                <h5 class="wrapper-subtitle">UP TO <span class="wrapper-inner-title">70%</span> OFF</h5>
-                <h1 class="wrapper-details">Fashion Collection Summer Sale</h1>
-                <a href="#" class="shop-btn">Shop Now</a>
+      {%- for block in section.blocks -%}
+        {{ block.settings.slide_image | img_url: 'medium' }}
+
+        <div class="swiper-slide hero-slider-one">
+          <div class="container">
+            <div class="col-lg-6">
+              <div class="wrapper-section" data-aos="fade-up">
+                <div class="wrapper-info">
+                  {% if block.settings.heading_sub_title != blank %}
+                    <h5 class="wrapper-subtitle">
+                      {{ block.settings.heading_sub_title }}
+                      {% comment %} UP TO <span class="wrapper-inner-title">70%</span> OFF {% endcomment %}
+                    </h5>
+                  {% endif %}
+                  {% if block.settings.heading_details != blank %}
+                    <h1 class="wrapper-details">{{ block.settings.heading_details }}</h1>
+                  {% endif %}
+                  {% if block.settings.button_link != blank %}
+                    <a href="{{ block.settings.button_link }}" class="shop-btn">{{ block.settings.button_label }}</a>
+                  {% endif %}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="swiper-slide hero-slider-two">
-        <div class="container">
-          <div class="col-lg-6">
-            <div class="wrapper-section">
-              <div class="wrapper-info">
-                <h5 class="wrapper-subtitle">UP TO <span class="wrapper-inner-title">70%</span> OFF</h5>
-                <h1 class="wrapper-details">Fashion Collection Summer Sale</h1>
-                <a href="#" class="shop-btn">Shop Now</a>
+      {% endfor %}
+
+      {% comment %}
+         <div class="swiper-slide hero-slider-two">
+          <div class="container">
+            <div class="col-lg-6">
+              <div class="wrapper-section">
+                <div class="wrapper-info">
+                  <h5 class="wrapper-subtitle">UP TO <span class="wrapper-inner-title">70%</span> OFF</h5>
+                  <h1 class="wrapper-details">Fashion Collection Summer Sale</h1>
+                  <a href="#" class="shop-btn">Shop Now</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="swiper-slide hero-slider-three">
-        <div class="container">
-          <div class="col-lg-6">
-            <div class="wrapper-section">
-              <div class="wrapper-info">
-                <h5 class="wrapper-subtitle">UP TO <span class="wrapper-inner-title">70%</span> OFF</h5>
-                <h1 class="wrapper-details">Fashion Collection Summer Sale</h1>
-                <a href="#" class="shop-btn">Shop Now</a>
+
+        <div class="swiper-slide hero-slider-three">
+          <div class="container">
+            <div class="col-lg-6">
+              <div class="wrapper-section">
+                <div class="wrapper-info">
+                  <h5 class="wrapper-subtitle">UP TO <span class="wrapper-inner-title">70%</span> OFF</h5>
+                  <h1 class="wrapper-details">Fashion Collection Summer Sale</h1>
+                  <a href="#" class="shop-btn">Shop Now</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      {% endcomment %}
     </div>
     <div class="swiper-pagination"></div>
   </div>
@@ -48,16 +65,92 @@
 {% schema %}
 {
   "name": "Hero Banner",
-  "max_blocks": 12,
+  "max_blocks": 10,
   "class": "hero-banner-section",
   "disabled_on": {
     "groups": ["header", "footer"]
   },
-  "settings": [],
-  "blocks": [],
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "full_bleed",
+          "label": "Full width"
+        },
+        {
+          "value": "grid",
+          "label": "Grid"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "slider_visual",
+      "label": "Pagination style",
+      "options": [
+        {
+          "value": "dots",
+          "label": "Dots"
+        },
+        {
+          "value": "counter",
+          "label": "Counter"
+        },
+        {
+          "value": "numbers",
+          "label": "Numbers"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Image"
+        },
+        {
+          "type": "html",
+          "id": "heading_sub_title",
+          "label": "Heading Subtitle"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_details",
+          "label": "Heading Details"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Hero Banner"
+      "name": "Hero Banner",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
     }
   ]
 }
