@@ -140,7 +140,7 @@
           "header_main_menu": "main-menu",
           "button_label": "All Categories",
           "button_link": "shopify:\/\/collections",
-          "vendor_button_text": "",
+          "vendor_button_text": "Become Vendor",
           "vendor_button_link": "#"
         }
       }
