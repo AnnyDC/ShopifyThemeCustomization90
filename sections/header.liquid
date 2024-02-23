@@ -848,10 +848,10 @@
         </div>
         <!-- main menu -->
 
-        {% assign vendor_btn = section.setings.vendor_button_link %}
-        {% if vendor_btn_link != blank %}
+        {% assign vendor_btn = section.setings.vendor_button_text %}
+        {% if vendor_button_text != blank %}
           <div class="header-vendor-btn">
-            <a href="{{ vendor_btn }}" class="shop-btn">
+            <a href="{{ section.setings.vendor_button_link }}" class="shop-btn">
               <span class="list-text shop-text">{{ section.setings.vendor_button_text }}</span>
               <span class="icon">
                 <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
