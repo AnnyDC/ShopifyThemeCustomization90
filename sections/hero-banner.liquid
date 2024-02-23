@@ -4,7 +4,7 @@
       {%- for block in section.blocks -%}
         
         <div class="swiper-slide hero-slider-one">
-          {{ block.settings.slide_image | image_url: width: 480 | image_tag }}
+           {{ block.settings.slide_image | image_url: width: 480 }}
           <div class="container">
             <div class="col-lg-6">
               <div class="wrapper-section" data-aos="fade-up">
