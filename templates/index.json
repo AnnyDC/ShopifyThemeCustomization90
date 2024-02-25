@@ -91,10 +91,11 @@
         "text_jmgE94": {
           "type": "text",
           "settings": {
-            "heading_details": "",
-            "heading_sub_title": "",
-            "button_label": "",
-            "button_link": ""
+            "image": "shopify:\/\/shop_images\/depositphotos_40967931-stock-photo-yellow-crochet-knit-hat-isolated.jpg",
+            "heading_details": "xsxsdsasadsa",
+            "heading_sub_title": "xczcdcsdc",
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/hat-gloves"
           }
         }
       },
