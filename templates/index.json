@@ -181,6 +181,14 @@
             "coll_label": "Cap",
             "collection_link": "shopify:\/\/collections\/hat-gloves"
           }
+        },
+        "text_XUj9gH": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/glass.webp",
+            "coll_label": "Sunglass",
+            "collection_link": "shopify:\/\/collections\/hat-gloves"
+          }
         }
       },
       "block_order": [
@@ -192,7 +200,8 @@
         "text_aGqVr3",
         "text_BFeeKV",
         "text_cbBdiB",
-        "text_zdAWqD"
+        "text_zdAWqD",
+        "text_XUj9gH"
       ],
       "settings": {
         "heading": "Our Categories",
