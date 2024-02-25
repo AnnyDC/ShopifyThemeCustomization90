@@ -173,6 +173,14 @@
             "coll_label": "Gold Rings",
             "collection_link": "shopify:\/\/collections\/hat-gloves"
           }
+        },
+        "text_zdAWqD": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cap.webp",
+            "coll_label": "Cap",
+            "collection_link": "shopify:\/\/collections\/hat-gloves"
+          }
         }
       },
       "block_order": [
@@ -183,7 +191,8 @@
         "text_i6xXQB",
         "text_aGqVr3",
         "text_BFeeKV",
-        "text_cbBdiB"
+        "text_cbBdiB",
+        "text_zdAWqD"
       ],
       "settings": {
         "heading": "Our Categories",
