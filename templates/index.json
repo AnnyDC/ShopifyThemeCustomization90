@@ -126,6 +126,14 @@
             "collection_link": "shopify:\/\/collections\/hat"
           }
         },
+        "text_FPpnwD": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sweaters.webp",
+            "coll_label": "Sweaters",
+            "collection_link": "shopify:\/\/collections\/jacket-women"
+          }
+        },
         "text_FdmPPY": {
           "type": "text",
           "settings": {
@@ -134,20 +142,21 @@
             "collection_link": "shopify:\/\/collections\/hat-gloves"
           }
         },
-        "text_FPpnwD": {
+        "text_i6xXQB": {
           "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/sweaters.webp",
-            "coll_label": "Sweaters",
-            "collection_link": "shopify:\/\/collections\/jacket-women"
+            "image": "shopify:\/\/shop_images\/gift.webp",
+            "coll_label": "Gift for Him",
+            "collection_link": "shopify:\/\/collections\/hat"
           }
         }
       },
       "block_order": [
         "text_zmLRCG",
         "text_XKjqrb",
+        "text_FPpnwD",
         "text_FdmPPY",
-        "text_FPpnwD"
+        "text_i6xXQB"
       ],
       "settings": {
         "heading": "Our Categories",
