@@ -14,7 +14,7 @@
                 </h4>
                 {% if block.settings.button_label != blank %}
                   <a href="{{ block.settings.button_link }}" class="shop-btn">
-                    {{- block.settings.button_label }}
+                    {{ block.settings.button_label }}
                     <span>
                       <svg
                         width="8"
@@ -72,7 +72,7 @@
 </section>
 {% schema %}
 {
-  "name": "Product Faschion",
+  "name": "Product Fashion",
   "class": "fashion-section",
   "disabled_on": {
     "groups": ["header", "footer"]
@@ -105,7 +105,7 @@
           "label": "Heading Subtitle"
         },
         {
-          "type": "url",
+          "type": "text",
           "id": "button_label",
           "label": "Button Label"
         },
@@ -119,7 +119,7 @@
   ],
   "presets": [
     {
-      "name": "Product Faschion",
+      "name": "Product Fashion",
       "blocks": [
         {
           "type": "text"
