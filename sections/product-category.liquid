@@ -19,7 +19,9 @@
             <img src="{{ block.settings.image | img_url: ''}}" alt="dress">
           </div>
           <div class="wrapper-info">
-            <a href="product-sidebar.html" class="wrapper-details">{{ block.settings.coll_label }}</a>
+            {% if block.settings.coll_label != blank %}
+              <a href="{{ block.settings.collection_link }}" class="wrapper-details">{{ block.settings.coll_label }}</a>
+            {% endif %}
           </div>
         </div>
       {% endfor %}
