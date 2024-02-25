@@ -92,9 +92,9 @@
           "type": "text",
           "settings": {
             "image": "shopify:\/\/shop_images\/depositphotos_40967931-stock-photo-yellow-crochet-knit-hat-isolated.jpg",
-            "heading_details": "xsxsdsasadsa",
-            "heading_sub_title": "xczcdcsdc",
-            "button_label": "Shop Now",
+            "heading_details": "Make your New<span class=\"wrapper-inner-title\">Styles with Our<\/span>Products",
+            "heading_sub_title": "Mega OFFER",
+            "button_label": "hop Now",
             "button_link": "shopify:\/\/collections\/hat-gloves"
           }
         }
