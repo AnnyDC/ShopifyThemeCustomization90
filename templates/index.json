@@ -74,10 +74,32 @@
         "layout": "full_bleed",
         "slider_visual": "dots"
       }
+    },
+    "product_fashion_f7Vp7e": {
+      "type": "product-fashion",
+      "blocks": {
+        "text_iQPAxY": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kids-Travel-Luggage-Suitcase-Yellow.jpg",
+            "heading_details": "Get 65% Offer <span class=\"wrapper-inner-title\">&amp; Make New<\/span> Fusion.",
+            "heading_sub_title": "NEW STYLE",
+            "button_label": "shopify:\/\/collections\/hat",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_iQPAxY"
+      ],
+      "settings": {
+        "heading": ""
+      }
     }
   },
   "order": [
     "rich_text",
-    "hero_banner_Gkxtax"
+    "hero_banner_Gkxtax",
+    "product_fashion_f7Vp7e"
   ]
 }
