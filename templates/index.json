@@ -106,11 +106,32 @@
       "settings": {
         "heading": ""
       }
+    },
+    "product_category_Yhm3Cm": {
+      "type": "product-category",
+      "blocks": {
+        "text_zmLRCG": {
+          "type": "text",
+          "settings": {
+            "coll_label": "",
+            "collection_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_zmLRCG"
+      ],
+      "settings": {
+        "heading": "Our Categories",
+        "all_collection_label": "View All",
+        "all_collection_link": "shopify:\/\/collections"
+      }
     }
   },
   "order": [
     "rich_text",
     "hero_banner_Gkxtax",
-    "product_fashion_f7Vp7e"
+    "product_fashion_f7Vp7e",
+    "product_category_Yhm3Cm"
   ]
 }
