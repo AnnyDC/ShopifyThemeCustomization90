@@ -113,7 +113,7 @@
         "text_zmLRCG": {
           "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/jk-women.jpg",
+            "image": "shopify:\/\/shop_images\/dresses.webp",
             "coll_label": "Dress",
             "collection_link": "shopify:\/\/collections\/jacket-women"
           }
@@ -133,12 +133,21 @@
             "coll_label": "Boots",
             "collection_link": "shopify:\/\/collections\/hat-gloves"
           }
+        },
+        "text_FPpnwD": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sweaters.webp",
+            "coll_label": "Sweaters",
+            "collection_link": "shopify:\/\/collections\/jacket-women"
+          }
         }
       },
       "block_order": [
         "text_zmLRCG",
         "text_XKjqrb",
-        "text_FdmPPY"
+        "text_FdmPPY",
+        "text_FPpnwD"
       ],
       "settings": {
         "heading": "Our Categories",
