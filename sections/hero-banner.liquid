@@ -2,9 +2,9 @@
   <div class="swiper hero-swiper">
     <div class="swiper-wrapper hero-wrapper">
       {%- for block in section.blocks -%}
-        
         <div class="swiper-slide hero-slider-one">
-           <img src="{{ block.settings.slide_image | img_url: 'medium'}}">
+          <!-- <img src="{{ block.settings.slide_image | img_url: 'medium'}}"> -->
+          <img src="{{ block.settings.slide_image | img_url: ''}}">
           <div class="container">
             <div class="col-lg-6">
               <div class="wrapper-section" data-aos="fade-up">
