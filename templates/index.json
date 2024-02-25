@@ -149,6 +149,14 @@
             "coll_label": "Gift for Him",
             "collection_link": "shopify:\/\/collections\/hat"
           }
+        },
+        "text_aGqVr3": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sneakers.webp",
+            "coll_label": "Sneakers",
+            "collection_link": "shopify:\/\/collections\/hat"
+          }
         }
       },
       "block_order": [
@@ -156,7 +164,8 @@
         "text_XKjqrb",
         "text_FPpnwD",
         "text_FdmPPY",
-        "text_i6xXQB"
+        "text_i6xXQB",
+        "text_aGqVr3"
       ],
       "settings": {
         "heading": "Our Categories",
