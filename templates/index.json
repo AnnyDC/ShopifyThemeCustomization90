@@ -197,6 +197,14 @@
             "coll_label": "Baby Shop",
             "collection_link": "shopify:\/\/collections\/hat"
           }
+        },
+        "text_AjGcnP": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bags.webp",
+            "coll_label": "Leather Bags",
+            "collection_link": "shopify:\/\/collections\/hat"
+          }
         }
       },
       "block_order": [
@@ -210,7 +218,8 @@
         "text_cbBdiB",
         "text_zdAWqD",
         "text_XUj9gH",
-        "text_DEBeEp"
+        "text_DEBeEp",
+        "text_AjGcnP"
       ],
       "settings": {
         "heading": "Our Categories",
