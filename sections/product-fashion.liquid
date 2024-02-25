@@ -4,8 +4,8 @@
       <div class="row gy-4 gx-5 gy-lg-0">
         {% for block in section.blocks %}
           <div class="col-lg-6">
+            <img src="{{ block.settings.image | img_url: 'medium'}}">
             <div class="product-wrapper wrapper-one" data-aos="fade-right">
-              <img src="{{ block.settings.image | img_url: 'medium'}}">
               <div class="wrapper-info">
                 <span class="wrapper-subtitle">{{ block.settings.heading_sub_title }}</span>
                 <h4 class="wrapper-details">
