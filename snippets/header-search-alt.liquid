@@ -1,0 +1,44 @@
+<!-- Search Modal -->
+<div class="modal-wrapper search">
+  <div onclick="modalAction('.search')" class="anywhere-away"></div>
+
+  <!-- change this -->
+  <div class="modal-main">
+    <div class="wrapper-close-btn" onclick="modalAction('.search')">
+      <span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="red"
+          class="w-6 h-6"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </span>
+    </div>
+
+    <form action="{{ routes.search_url }}">
+      <div class="wrapper-main">
+        <div class="search-section">
+          {% comment %} <input type="text" placeholder="Search Products........."> {% endcomment %}
+          <div class="divider"></div>
+
+          {% comment %} <a href="#" class="shop-btn">Search</a> {% endcomment %}
+          <input
+            type="text"
+            placeholder="Search Products........."
+            name="q"
+            value="{{ search.terms | escape }}"
+          >
+          <button type="button">All Categories</button>
+          <input type="submit" value="Search" class="shop-btn">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- change this -->
+</div>
+<!-- Search Modal -->

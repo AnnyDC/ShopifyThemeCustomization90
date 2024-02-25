@@ -30,7 +30,9 @@
           </a>
         </div>
         <div class="header-cart-items">
+          <!-- Start Search Part -->
           <div class="header-search">
+            <!-- Search Button -->
             <button class="header-search-btn" onclick="modalAction('.search')">
               <span>
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,38 +43,47 @@
                 </svg>
               </span>
             </button>
-            <div class="modal-wrapper search">
-              <div onclick="modalAction('.search')" class="anywhere-away"></div>
+            <!-- Search Button -->
 
-              <!-- change this -->
-              <div class="modal-main">
-                <div class="wrapper-close-btn" onclick="modalAction('.search')">
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="red"
-                      class="w-6 h-6"
-                    >
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                  </span>
-                </div>
-                <div class="wrapper-main">
-                  <div class="search-section">
-                    <input type="text" placeholder="Search Products.........">
-                    <div class="divider"></div>
-                    <button type="button">All Categories</button>
-                    <a href="#" class="shop-btn">Search</a>
+            <!-- Search Modal -->
+            {% render 'header-search-alt' %}
+            {% comment %}
+               <div class="modal-wrapper search">
+                <div onclick="modalAction('.search')" class="anywhere-away"></div>
+
+                <!-- change this -->
+                <div class="modal-main">
+                  <div class="wrapper-close-btn" onclick="modalAction('.search')">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="red"
+                        class="w-6 h-6"
+                      >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                      </svg>
+                    </span>
+                  </div>
+
+                  <div class="wrapper-main">
+                    <div class="search-section">
+                      <input type="text" placeholder="Search Products.........">
+                      <div class="divider"></div>
+                      <button type="button">All Categories</button>
+                      <a href="#" class="shop-btn">Search</a>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- change this -->
-            </div>
+                <!-- change this -->
+              </div>
+            {% endcomment %}
+            <!-- Search Modal -->
           </div>
+          <!-- End Search Part -->
 
           <div class="header-cart">
             <a href="cart.html" class="cart-item">
@@ -848,11 +859,11 @@
         </div>
         <!-- main menu -->
 
-        {% assign vendor_btn = section.setings.vendor_button_link %}
-        {% if vendor_btn_link != blank %}
+        {% assign vendor_btn = section.settings.vendor_button_text %}
+        {% if vendor_btn != blank %}
           <div class="header-vendor-btn">
-            <a href="{{ vendor_btn }}" class="shop-btn">
-              <span class="list-text shop-text">{{ section.setings.vendor_button_text }}</span>
+            <a href="{{ section.settings.vendor_button_link }}" class="shop-btn">
+              <span class="list-text shop-text">{{ section.settings.vendor_button_text }}</span>
               <span class="icon">
                 <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
