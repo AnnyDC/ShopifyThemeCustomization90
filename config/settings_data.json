@@ -128,9 +128,9 @@
         "type": "top-nav",
         "settings": {
           "top_nav_menu": "heder-nav",
-          "short_desc": "Need help? Call us:1",
-          "additional_text": "",
-          "url_link": "tel:+ 00645 4568"
+          "short_desc": "Need help? Call us:",
+          "additional_text": "+ 00645 4568",
+          "url_link": "tel: + 00645 4568"
         }
       },
       "header": {
