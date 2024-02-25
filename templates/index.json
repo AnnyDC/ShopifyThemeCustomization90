@@ -125,11 +125,20 @@
             "coll_label": "Leather Bags",
             "collection_link": "shopify:\/\/collections\/hat"
           }
+        },
+        "text_FdmPPY": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shoes.webp",
+            "coll_label": "Boots",
+            "collection_link": "shopify:\/\/collections\/hat-gloves"
+          }
         }
       },
       "block_order": [
         "text_zmLRCG",
-        "text_XKjqrb"
+        "text_XKjqrb",
+        "text_FdmPPY"
       ],
       "settings": {
         "heading": "Our Categories",
