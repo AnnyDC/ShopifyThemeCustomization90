@@ -113,8 +113,9 @@
         "text_zmLRCG": {
           "type": "text",
           "settings": {
-            "coll_label": "",
-            "collection_link": ""
+            "image": "shopify:\/\/shop_images\/jk-women.jpg",
+            "coll_label": "Dress",
+            "collection_link": "shopify:\/\/collections\/jacket-women"
           }
         }
       },
