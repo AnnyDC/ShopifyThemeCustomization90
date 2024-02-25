@@ -53,11 +53,22 @@
             "button_label": "",
             "button_link": ""
           }
+        },
+        "slide_3BwXp4": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/logo.jpg",
+            "heading_sub_title": "",
+            "heading_details": "",
+            "button_label": "",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
         "slide_EqFaYr",
-        "slide_9JgeXY"
+        "slide_9JgeXY",
+        "slide_3BwXp4"
       ],
       "settings": {
         "layout": "full_bleed",
