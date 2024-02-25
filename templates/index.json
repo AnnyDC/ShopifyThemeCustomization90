@@ -189,6 +189,14 @@
             "coll_label": "Sunglass",
             "collection_link": "shopify:\/\/collections\/hat-gloves"
           }
+        },
+        "text_DEBeEp": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/baby.webp",
+            "coll_label": "Baby Shop",
+            "collection_link": "shopify:\/\/collections\/hat"
+          }
         }
       },
       "block_order": [
@@ -201,7 +209,8 @@
         "text_BFeeKV",
         "text_cbBdiB",
         "text_zdAWqD",
-        "text_XUj9gH"
+        "text_XUj9gH",
+        "text_DEBeEp"
       ],
       "settings": {
         "heading": "Our Categories",
