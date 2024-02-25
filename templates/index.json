@@ -157,6 +157,14 @@
             "coll_label": "Sneakers",
             "collection_link": "shopify:\/\/collections\/hat"
           }
+        },
+        "text_BFeeKV": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/watch.webp",
+            "coll_label": "Watch",
+            "collection_link": "shopify:\/\/collections\/hat"
+          }
         }
       },
       "block_order": [
@@ -165,7 +173,8 @@
         "text_FPpnwD",
         "text_FdmPPY",
         "text_i6xXQB",
-        "text_aGqVr3"
+        "text_aGqVr3",
+        "text_BFeeKV"
       ],
       "settings": {
         "heading": "Our Categories",
