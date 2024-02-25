@@ -30,9 +30,54 @@
         "padding_top": 40,
         "padding_bottom": 0
       }
+    },
+    "hero_banner_Gkxtax": {
+      "type": "hero-banner",
+      "blocks": {
+        "slide_EqFaYr": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/fashion-week-template-design_52683-150895.jpg",
+            "heading_sub_title": "",
+            "heading_details": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "slide_9JgeXY": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/dog4.webp",
+            "heading_sub_title": "",
+            "heading_details": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "slide_3BwXp4": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/logo.jpg",
+            "heading_sub_title": "",
+            "heading_details": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_EqFaYr",
+        "slide_9JgeXY",
+        "slide_3BwXp4"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slider_visual": "dots"
+      }
     }
   },
   "order": [
-    "rich_text"
+    "rich_text",
+    "hero_banner_Gkxtax"
   ]
 }
