@@ -60,8 +60,8 @@
             "slide_image": "shopify:\/\/shop_images\/hero-slider-three.webp",
             "heading_sub_title": "UP TO <span class=\"wrapper-inner-title\">70%<\/span> OFF",
             "heading_details": "Fashion Collection<strong> <\/strong>Summer Sale",
-            "button_label": "",
-            "button_link": ""
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/hat"
           }
         }
       },
