@@ -117,10 +117,19 @@
             "coll_label": "Dress",
             "collection_link": "shopify:\/\/collections\/jacket-women"
           }
+        },
+        "text_XKjqrb": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/51kttLN0puL._SX679.jpg",
+            "coll_label": "Leather Bags",
+            "collection_link": "shopify:\/\/collections\/hat"
+          }
         }
       },
       "block_order": [
-        "text_zmLRCG"
+        "text_zmLRCG",
+        "text_XKjqrb"
       ],
       "settings": {
         "heading": "Our Categories",
