@@ -74,7 +74,25 @@
 
  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 <script>
-  
+  var swiper = $('.swiper-container').swiper({
+  onSlideChangeStart: function(){
+    // on the first slide
+    if (swiper.activeIndex==0) {
+      $('.left-arrow').hide()
+      $('.right-arrow').show()
+    }
+    // most right postion
+    else if (swiper.activeIndex == swiper.slides.length-1) {
+      $('.left-arrow').show()
+      $('.right-arrow').hide()
+    }
+    // middle positions
+    else {
+      $('.left-arrow').show()
+      $('.right-arrow').show()
+    }   
+  }
+})
 </script>
 
 {% schema %}
