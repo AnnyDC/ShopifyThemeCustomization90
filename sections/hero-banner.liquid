@@ -47,7 +47,7 @@
    <swiper-container class="mySwiper swiper-container swiper-wrapper hero-wrapper"pagination="true" pagination-clickable="true" space-between="30" effect="fade"
     navigation="true">
       {%- for block in section.blocks -%}
-    <swiper-slide class=" hero-slider-three swiper-slide-visible" style="background-image:url('{{ block.settings.bg-image.src | image_url   }}');">
+    <swiper-slide class=" hero-slider-three swiper-slide-visible" style="background-image:url('{{ block.settings.image.src | image_url   }}');">
     
          <div class="container">
             <div class="col-lg-6">
@@ -149,7 +149,11 @@
       "name": "Slide",
       "limit": 5,
       "settings": [
-    
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },    
         {
           "type": "html",
           "id": "heading_sub_title",
@@ -169,12 +173,7 @@
           "type": "url",
           "id": "button_link",
           "label": "Button Link"
-        },
-      {
-  "type": "image_picker",
-  "id": "bg-image",
-  "label": "Custom Background Image"
-}
+        }      
       ]
     }
   ],
