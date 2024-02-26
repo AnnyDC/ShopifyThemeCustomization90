@@ -226,12 +226,33 @@
         "all_collection_label": "View All",
         "all_collection_link": "shopify:\/\/collections"
       }
+    },
+    "product_brand_izKF7f": {
+      "type": "product-brand",
+      "blocks": {
+        "text_bRkEAQ": {
+          "type": "text",
+          "settings": {
+            "brand_label": "",
+            "brand_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_bRkEAQ"
+      ],
+      "settings": {
+        "heading": "Brand of Products",
+        "button_label": "View All",
+        "button_link": "shopify:\/\/collections"
+      }
     }
   },
   "order": [
     "rich_text",
     "hero_banner_Gkxtax",
     "product_fashion_f7Vp7e",
-    "product_category_Yhm3Cm"
+    "product_category_Yhm3Cm",
+    "product_brand_izKF7f"
   ]
 }
