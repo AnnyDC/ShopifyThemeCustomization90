@@ -35,7 +35,7 @@
    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
     navigation="true">
       {%- for block in section.blocks -%}
-    <swiper-slide class="hero-swiper" style="background-image:url('{{ block.settings.bg-image.src | img_url: 'master' }}');">
+    <swiper-slide class="hero-swiper" style="background-image:url('{{ block.settings.bg-image.src | image_url: 'master' }}');">
     
          <div class="container">
             <div class="col-lg-6">
