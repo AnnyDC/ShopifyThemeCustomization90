@@ -31,11 +31,8 @@ var swiper = new Swiper(".hero-swiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  }
+
 });
 
 var swiper = new Swiper(".about-swiper", {
