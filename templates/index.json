@@ -293,6 +293,14 @@
             "brand_label": "",
             "brand_link": "#"
           }
+        },
+        "text_DCjxtr": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-9_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
         }
       },
       "block_order": [
@@ -303,7 +311,8 @@
         "text_MVPdEL",
         "text_jpJnex",
         "text_ex34fC",
-        "text_hffeRy"
+        "text_hffeRy",
+        "text_DCjxtr"
       ],
       "settings": {
         "heading": "Brand of Products",
