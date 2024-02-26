@@ -35,7 +35,8 @@
    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
     navigation="true">
       {%- for block in section.blocks -%}
-    <swiper-slide style="background-image:url('{{ section.settings.bg-image }}');">
+    <swiper-slide style="background: url('{{ settings.settingID | img_url: 'master' }}');
+">
     
          <div class="container">
             <div class="col-lg-6">
