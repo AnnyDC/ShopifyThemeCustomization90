@@ -63,32 +63,12 @@
             "button_label": "",
             "button_link": ""
           }
-        },
-        "slide_NPgiY9": {
-          "type": "slide",
-          "settings": {
-            "heading_sub_title": "",
-            "heading_details": "",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "slide_3BwXp4": {
-          "type": "slide",
-          "settings": {
-            "heading_sub_title": "UP TO <span class=\"wrapper-inner-title\">70%<\/span> OFF",
-            "heading_details": "Fashion Collection<strong> <\/strong>Summer Sale",
-            "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/hat"
-          }
         }
       },
       "block_order": [
         "slide_EqFaYr",
         "slide_9JgeXY",
-        "slide_V4XLNj",
-        "slide_NPgiY9",
-        "slide_3BwXp4"
+        "slide_V4XLNj"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -246,12 +226,133 @@
         "all_collection_label": "View All",
         "all_collection_link": "shopify:\/\/collections"
       }
+    },
+    "product_brand_izKF7f": {
+      "type": "product-brand",
+      "blocks": {
+        "text_bRkEAQ": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
+        },
+        "text_NEgdgP": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-2_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
+        },
+        "text_NgPgmn": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-3_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
+        },
+        "text_8QR3Qj": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-4_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
+        },
+        "text_MVPdEL": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-5_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
+        },
+        "text_jpJnex": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-6_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
+        },
+        "text_ex34fC": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-7_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
+        },
+        "text_hffeRy": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-8_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
+        },
+        "text_DCjxtr": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-9_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
+        },
+        "text_H3qLh4": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-10_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
+        },
+        "text_j4rx4p": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-11_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
+        },
+        "text_7PzMqg": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-12_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "text_bRkEAQ",
+        "text_NEgdgP",
+        "text_NgPgmn",
+        "text_8QR3Qj",
+        "text_MVPdEL",
+        "text_jpJnex",
+        "text_ex34fC",
+        "text_hffeRy",
+        "text_DCjxtr",
+        "text_H3qLh4",
+        "text_j4rx4p",
+        "text_7PzMqg"
+      ],
+      "settings": {
+        "heading": "Brand of Products",
+        "button_label": "View All",
+        "button_link": "shopify:\/\/collections"
+      }
     }
   },
   "order": [
     "rich_text",
     "hero_banner_Gkxtax",
     "product_fashion_f7Vp7e",
-    "product_category_Yhm3Cm"
+    "product_category_Yhm3Cm",
+    "product_brand_izKF7f"
   ]
 }
