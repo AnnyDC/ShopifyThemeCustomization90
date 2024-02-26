@@ -4,7 +4,7 @@
       <div class="row gy-4 gx-5 gy-lg-0">
         {% for block in section.blocks %}
           <div class="col-lg-6">
-            <div class="product-wrapper wrapper-one" data-aos="fade-right" style="background-image:url('{{ block.settings.image.src | image_url   }}');">
+            <div class="product-wrapper wrapper-one" data-aos="fade-right" style="background-image:url('{{ block.settings.image | image_url   }}');">
               <!-- <img src="{{ block.settings.image | img_url: '400x300' }}"> -->
               <div class="wrapper-info">
                 <span class="wrapper-subtitle">{{ block.settings.heading_sub_title }}</span>
