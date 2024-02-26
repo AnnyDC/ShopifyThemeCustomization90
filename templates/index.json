@@ -50,7 +50,8 @@
             "heading_sub_title": "UP TO <span class=\"wrapper-inner-title\">70%<\/span> OFF",
             "heading_details": "Fashion Collection Summer Sale",
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/jacket-men"
+            "button_link": "shopify:\/\/collections\/jacket-men",
+            "bg-image": "shopify:\/\/shop_images\/hero-slider-one.webp"
           }
         },
         "slide_V4XLNj": {
@@ -90,7 +91,7 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "slider_visual": "dots"
+        "slider_visual": "numbers"
       }
     },
     "product_fashion_f7Vp7e": {
