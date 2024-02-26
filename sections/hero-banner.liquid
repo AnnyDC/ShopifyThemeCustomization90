@@ -1,10 +1,64 @@
+<style>
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    display: none !important;
+  }
+  swiper-container.mySwiper .hero-slider-three {
+    display: flex;
+    align-items: center;
+  }
+  .wrapper-section {
+    pointer-events: inherit;
+  }
+</style>
 <section id="hero" class="hero">
+  <!--
+    <div class="swiper hero-swiper">
+      <div class="swiper-wrapper hero-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="swiper-slide hero-slider-one">
+            {% comment %} <img src="{{ block.settings.slide_image | img_url: 'medium'}}"> {% endcomment %}
+            <img src="{{ block.settings.slide_image | img_url: ''}}">
+            <div class="container">
+              <div class="col-lg-6">
+                <div class="wrapper-section" data-aos="fade-up">
+                  <div class="wrapper-info">
+                    {% if block.settings.heading_sub_title != blank %}
+                      <h5 class="wrapper-subtitle">
+                        {{ block.settings.heading_sub_title }}
+                        {% comment %} UP TO <span class="wrapper-inner-title">70%</span> OFF {% endcomment %}
+                      </h5>
+                    {% endif %}
+                    {% if block.settings.heading_details != blank %}
+                      <h1 class="wrapper-details">{{ block.settings.heading_details }}</h1>
+                    {% endif %}
+                    {% if block.settings.button_link != blank %}
+                      <a href="{{ block.settings.button_link }}" class="shop-btn">{{ block.settings.button_label }}</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  -->
   <div class="swiper hero-swiper">
-    <div class="swiper-wrapper hero-wrapper">
+    <swiper-container
+      class="mySwiper swiper-container swiper-wrapper hero-wrapper"
+      pagination="true"
+      pagination-clickable="true"
+      space-between="30"
+      effect="fade"
+      navigation="true"
+    >
       {%- for block in section.blocks -%}
-        <div class="swiper-slide hero-slider-one">
-          {% comment %} <img src="{{ block.settings.slide_image | img_url: 'medium'}}"> {% endcomment %}
-          <img src="{{ block.settings.slide_image | img_url: ''}}">
+        <swiper-slide
+          class=" hero-slider-three swiper-slide-visible"
+          style="background-image:url('{{ block.settings.image.src | image_url   }}');"
+        >
           <div class="container">
             <div class="col-lg-6">
               <div class="wrapper-section" data-aos="fade-up">
@@ -25,12 +79,36 @@
               </div>
             </div>
           </div>
-        </div>
+        </swiper-slide>
       {% endfor %}
-    </div>
-    <div class="swiper-pagination"></div>
+    </swiper-container>
   </div>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<!--
+  <script>
+    var swiper = $('.swiper-container').swiper({
+    onSlideChangeStart: function(){
+      // on the first slide
+      if (swiper.activeIndex==0) {
+        $('.left-arrow').hide()
+        $('.right-arrow').show()
+      }
+      // most right postion
+      else if (swiper.activeIndex == swiper.slides.length-1) {
+        $('.left-arrow').show()
+        $('.right-arrow').hide()
+      }
+      // middle positions
+      else {
+        $('.left-arrow').show()
+        $('.right-arrow').show()
+      }
+    }
+  })
+  </script>
+-->
 
 {% schema %}
 {
@@ -84,7 +162,7 @@
       "settings": [
         {
           "type": "image_picker",
-          "id": "slide_image",
+          "id": "image",
           "label": "Image"
         },
         {
