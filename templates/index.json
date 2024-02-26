@@ -37,17 +37,36 @@
         "slide_EqFaYr": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/fashion-week-template-design_52683-150895.jpg",
-            "heading_sub_title": "",
-            "heading_details": "",
-            "button_label": "",
-            "button_link": ""
+            "image": "shopify:\/\/shop_images\/hero-slider-three.webp",
+            "heading_sub_title": "UP TO <span class=\"wrapper-inner-title\">70%<\/span> OFF",
+            "heading_details": "Fashion Collection Summer Sale",
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/hat-gloves"
           }
         },
         "slide_9JgeXY": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/dog4.webp",
+            "image": "shopify:\/\/shop_images\/hero-slider-two.webp",
+            "heading_sub_title": "UP TO <span class=\"wrapper-inner-title\">70%<\/span> OFF",
+            "heading_details": "Fashion Collection Summer Sale",
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/jacket-men"
+          }
+        },
+        "slide_V4XLNj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hero-slider-three.webp",
+            "heading_sub_title": "UP TO <span class=\"wrapper-inner-title\">70%<\/span> OFF",
+            "heading_details": "Fashion Collection Summer Sale",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "slide_NPgiY9": {
+          "type": "slide",
+          "settings": {
             "heading_sub_title": "",
             "heading_details": "",
             "button_label": "",
@@ -57,22 +76,23 @@
         "slide_3BwXp4": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/logo.jpg",
-            "heading_sub_title": "",
-            "heading_details": "",
-            "button_label": "",
-            "button_link": ""
+            "heading_sub_title": "UP TO <span class=\"wrapper-inner-title\">70%<\/span> OFF",
+            "heading_details": "Fashion Collection<strong> <\/strong>Summer Sale",
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/hat"
           }
         }
       },
       "block_order": [
         "slide_EqFaYr",
         "slide_9JgeXY",
+        "slide_V4XLNj",
+        "slide_NPgiY9",
         "slide_3BwXp4"
       ],
       "settings": {
         "layout": "full_bleed",
-        "slider_visual": "dots"
+        "slider_visual": "numbers"
       }
     },
     "product_fashion_f7Vp7e": {
@@ -81,7 +101,7 @@
         "text_iQPAxY": {
           "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Kids-Travel-Luggage-Suitcase-Yellow.jpg",
+            "image": "shopify:\/\/shop_images\/syle-bg-one.webp",
             "heading_details": "Get 65% Offer <span class=\"wrapper-inner-title\">& Make New<\/span> Fusion.",
             "heading_sub_title": "NEW STYLE",
             "button_label": "Shop Now",
@@ -91,7 +111,7 @@
         "text_jmgE94": {
           "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/depositphotos_40967931-stock-photo-yellow-crochet-knit-hat-isolated.jpg",
+            "image": "shopify:\/\/shop_images\/style-bg-two.webp",
             "heading_details": "Make your New<span class=\"wrapper-inner-title\">Styles with Our<\/span>Products",
             "heading_sub_title": "Mega OFFER",
             "button_label": "hop Now",
