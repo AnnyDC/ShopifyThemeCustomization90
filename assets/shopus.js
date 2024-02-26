@@ -20,54 +20,6 @@ function heightanimation(ele) {
 }
 heightanimation("subMenu");
 
-// hero-swiper-------------------------------------
-var swiper = new Swiper(".hero-swiper", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  effect: "fade",
-  autoplay: {
-    delay: 2500,
-  }
-
-
-});
-
-var swiper = new Swiper(".about-swiper", {
-  spaceBetween: 30,
-  slidesPerView: 3,
-  roundLengths: true,
-  // loop: true,
-  loopAdditionalSlides: 30,
-  // autoplay: {
-  //   delay: 2500,
-  // },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
-    640: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-    },
-    1260: {
-      slidesPerView: 3
-    },
-  },
-});
 
 // product-details-----------------------------------
 var swiper = new Swiper(".product-bottom", {
