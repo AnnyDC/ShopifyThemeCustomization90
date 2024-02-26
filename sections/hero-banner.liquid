@@ -1,10 +1,8 @@
 
 <section id="hero" class="hero">
-  <div class="swiper hero-swiper">
+  <!-- <div class="swiper hero-swiper">
     <div class="swiper-wrapper hero-wrapper">
-       <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
       {%- for block in section.blocks -%}
-         <swiper-slide>
         <div class="swiper-slide hero-slider-one">
           {% comment %} <img src="{{ block.settings.slide_image | img_url: 'medium'}}"> {% endcomment %}
           <img src="{{ block.settings.slide_image | img_url: ''}}">
@@ -29,12 +27,26 @@
             </div>
           </div>
         </div>
-        </swiper-slide>
-         </swiper-container>
       {% endfor %}
     </div>
     <div class="swiper-pagination"></div>
-  </div>
+  </div> -->
+
+   <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
+    navigation="true">
+    <swiper-slide>
+      <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+    </swiper-slide>
+  </swiper-container>
 </section>
  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 {% schema %}
