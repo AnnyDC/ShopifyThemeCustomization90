@@ -21,7 +21,7 @@ function heightanimation(ele) {
 heightanimation("subMenu");
 
 // hero-swiper-------------------------------------
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".hero-swiper", {
   spaceBetween: 30,
   centeredSlides: true,
   effect: "fade",
@@ -38,7 +38,7 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".about-swiper", {
   spaceBetween: 30,
   slidesPerView: 3,
   roundLengths: true,
