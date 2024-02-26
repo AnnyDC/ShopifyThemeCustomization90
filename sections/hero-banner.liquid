@@ -40,7 +40,7 @@
     <div class="swiper-pagination"></div>
   </div>   -->
 <div class="swiper hero-swiper">
-   <swiper-container class="mySwiper swiper-wrapper hero-wrapper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
+   <swiper-container class="mySwiper swiper-container swiper-wrapper hero-wrapper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
     navigation="true">
       {%- for block in section.blocks -%}
     <swiper-slide class="hero-swiper" style="background-image:url('{{ block.settings.bg-image.src | image_url   }}');">
