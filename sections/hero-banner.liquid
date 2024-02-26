@@ -4,6 +4,7 @@
     <div class="swiper-wrapper hero-wrapper">
        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
       {%- for block in section.blocks -%}
+         <swiper-slide>
         <div class="swiper-slide hero-slider-one">
           {% comment %} <img src="{{ block.settings.slide_image | img_url: 'medium'}}"> {% endcomment %}
           <img src="{{ block.settings.slide_image | img_url: ''}}">
@@ -28,6 +29,7 @@
             </div>
           </div>
         </div>
+        </swiper-slide>
          </swiper-container>
       {% endfor %}
     </div>
