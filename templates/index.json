@@ -245,11 +245,20 @@
             "brand_label": "",
             "brand_link": "#"
           }
+        },
+        "text_NgPgmn": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-3_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
+          }
         }
       },
       "block_order": [
         "text_bRkEAQ",
-        "text_NEgdgP"
+        "text_NEgdgP",
+        "text_NgPgmn"
       ],
       "settings": {
         "heading": "Brand of Products",
