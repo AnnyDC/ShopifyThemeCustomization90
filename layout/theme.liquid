@@ -32,7 +32,50 @@
 
     {% render 'meta-tags' %}
 
-    
+    <!-- ------------- swiper-css -------------- -->
+
+    {% comment %} <link rel="stylesheet" href="./css/swiper10-bundle.min.css"> {% endcomment %}
+    {{ 'swiper10-bundle.min.css' | asset_url | stylesheet_tag }}
+
+    <!-- ------------- bootstrap-css -------------- -->
+    {% comment %} <link rel="stylesheet" href="./css/bootstrap-5.3.2.min.css"> {% endcomment %}
+    {{ 'bootstrap-5.3.2.min.css' | asset_url | stylesheet_tag }}
+
+    <!-- -------------------- Range Slider ----------------- -->
+    {% comment %} <link rel="stylesheet" href="css/nouislider.min.css"> {% endcomment %}
+    {{ 'nouislider.min.css' | asset_url | stylesheet_tag }}
+
+    <!-- -------------------- Scroll ----------------- -->
+    {% comment %} <link rel="stylesheet" href="css/aos-3.0.0.css"> {% endcomment %}
+    {{ 'aos-3.0.0.css' | asset_url | stylesheet_tag }}
+
+    <!-- ------------- additional-css -------------- -->
+    {% comment %} <link rel="stylesheet" href="./css/style.css"> {% endcomment %}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+
+    <!-- ------------- jQuery -------------- -->
+    {% comment %} <script src="assets/js/jquery_3.7.1.min.js"></script> {% endcomment %}
+    {{ 'jquery_3.7.1.min.js' | asset_url | script_tag }}
+
+    <!-- ------------- bootstrap-js -------------- -->
+    {% comment %} <script src="assets/js/bootstrap_5.3.2.bundle.min.js"></script> {% endcomment %}
+    {{ 'bootstrap_5.3.2.bundle.min.js' | asset_url | script_tag }}
+
+    <!-- ------------- Range-Slider-js -------------- -->
+    {% comment %} <script src="assets/js/nouislider.min.js"></script> {% endcomment %}
+    {{ 'nouislider.min.js' | asset_url | script_tag }}
+
+    <!-- ------------- scroll-Animation-js -------------- -->
+    {% comment %} <script src="assets/js/aos-3.0.0.js"></script> {% endcomment %}
+    {{ 'aos-3.0.0.js' | asset_url | script_tag }}
+
+    <!-- ------------- swiper-js -------------- -->
+    {% comment %} <script src="assets/js/swiper10-bundle.min.js"></script> {% endcomment %}
+    {{ 'swiper10-bundle.min.js' | asset_url | script_tag }}
+
+    <!-- ------------- additional-js -------------- -->
+    {% comment %} <script src="assets/js/shopus.js"></script> {% endcomment %}
+    {{ 'shopus.js' | asset_url | script_tag }}
 
     {{ content_for_header }}
   </head>
