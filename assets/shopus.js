@@ -27,11 +27,8 @@ var swiper = new Swiper(".hero-swiper", {
   effect: "fade",
   autoplay: {
     delay: 2500,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
   }
+
 
 });
 
