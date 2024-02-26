@@ -1,6 +1,6 @@
 <style>
   .swiper-button-prev, .swiper-rtl .swiper-button-next {
-    
+    display: none !important;
 }
 
 </style>
@@ -37,14 +37,14 @@
     <div class="swiper-pagination"></div>
   </div>   -->
 <div class="swiper hero-swiper">
-   <swiper-container class="mySwiper swiper-container swiper-wrapper hero-wrapper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
+   <swiper-container class="mySwiper swiper-container swiper-wrapper hero-wrapper"pagination="true" pagination-clickable="true" space-between="30" effect="fade"
     navigation="true">
       {%- for block in section.blocks -%}
     <swiper-slide class="swiper-slide hero-slider-three swiper-slide-visible" style="background-image:url('{{ block.settings.bg-image.src | image_url   }}');">
     
          <div class="container">
             <div class="col-lg-6">
-              <div class="wrapper-section" >
+              <div class="wrapper-section" data-aos="fade-up">
                 <div class="wrapper-info">
                   {% if block.settings.heading_sub_title != blank %}
                     <h5 class="wrapper-subtitle">
