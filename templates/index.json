@@ -233,13 +233,23 @@
         "text_bRkEAQ": {
           "type": "text",
           "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-1.webp",
             "brand_label": "",
-            "brand_link": ""
+            "brand_link": "#"
+          }
+        },
+        "text_NEgdgP": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-img-2_1.webp",
+            "brand_label": "",
+            "brand_link": "#"
           }
         }
       },
       "block_order": [
-        "text_bRkEAQ"
+        "text_bRkEAQ",
+        "text_NEgdgP"
       ],
       "settings": {
         "heading": "Brand of Products",
