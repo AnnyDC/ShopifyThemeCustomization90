@@ -37,6 +37,7 @@
         "slide_EqFaYr": {
           "type": "slide",
           "settings": {
+            "slide_image": "shopify:\/\/shop_images\/hero-slider-two.webp",
             "heading_sub_title": "UP TO <span class=\"wrapper-inner-title\">70%<\/span> OFF",
             "heading_details": "Fashion Collection Summer Sale",
             "button_label": "Shop Now",
@@ -46,10 +47,20 @@
         "slide_9JgeXY": {
           "type": "slide",
           "settings": {
+            "slide_image": "shopify:\/\/shop_images\/hero-slider-one.webp",
             "heading_sub_title": "UP TO <span class=\"wrapper-inner-title\">70%<\/span> OFF",
             "heading_details": "Fashion Collection Summer Sale",
             "button_label": "Shop Now",
             "button_link": "shopify:\/\/collections\/jacket-men"
+          }
+        },
+        "slide_V4XLNj": {
+          "type": "slide",
+          "settings": {
+            "heading_sub_title": "",
+            "heading_details": "",
+            "button_label": "",
+            "button_link": ""
           }
         },
         "slide_NPgiY9": {
@@ -74,6 +85,7 @@
       "block_order": [
         "slide_EqFaYr",
         "slide_9JgeXY",
+        "slide_V4XLNj",
         "slide_NPgiY9",
         "slide_3BwXp4"
       ],
