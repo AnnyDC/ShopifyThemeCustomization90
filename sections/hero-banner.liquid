@@ -1,6 +1,6 @@
 
 <section id="hero" class="hero">
-  <!-- <div class="swiper hero-swiper">
+<div class="swiper hero-swiper">
     <div class="swiper-wrapper hero-wrapper">
       {%- for block in section.blocks -%}
         <div class="swiper-slide hero-slider-one">
@@ -30,13 +30,33 @@
       {% endfor %}
     </div>
     <div class="swiper-pagination"></div>
-  </div> -->
+  </div> 
 
    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
     navigation="true">
       {%- for block in section.blocks -%}
     <swiper-slide>
       <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+         <div class="container">
+            <div class="col-lg-6">
+              <div class="wrapper-section" data-aos="fade-up">
+                <div class="wrapper-info">
+                  {% if block.settings.heading_sub_title != blank %}
+                    <h5 class="wrapper-subtitle">
+                      {{ block.settings.heading_sub_title }}
+                      {% comment %} UP TO <span class="wrapper-inner-title">70%</span> OFF {% endcomment %}
+                    </h5>
+                  {% endif %}
+                  {% if block.settings.heading_details != blank %}
+                    <h1 class="wrapper-details">{{ block.settings.heading_details }}</h1>
+                  {% endif %}
+                  {% if block.settings.button_link != blank %}
+                    <a href="{{ block.settings.button_link }}" class="shop-btn">{{ block.settings.button_label }}</a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
     </swiper-slide>
 {% endfor %}
   </swiper-container>
