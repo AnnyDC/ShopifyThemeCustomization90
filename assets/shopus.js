@@ -38,7 +38,7 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-var swiper = new Swiper(".about-swiper", {
+var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   slidesPerView: 3,
   roundLengths: true,
