@@ -13,7 +13,8 @@
               {% for block in section.blocks %}
                 <div class="product-wrapper">
                     <div class="wrapper-img">
-                        {{ block.settings.image | image_url }}
+                      <img src="{{ block.settings.image | image_url }}" alt="img">
+                        
                         {% comment %} <span>
                             <svg width="94" height="82" viewBox="0 0 94 82" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
