@@ -421,6 +421,15 @@
         "button_link": "shopify:\/\/collections\/jacket-men",
         "collection_link": "jacket-men"
       }
+    },
+    "featured_product_alt_p6UMXk": {
+      "type": "featured-product-alt",
+      "settings": {
+        "heading": "NEW ARRIVALS",
+        "button_label": "View All",
+        "button_link": "shopify:\/\/collections\/hat-gloves",
+        "collection_link": "hat-gloves"
+      }
     }
   },
   "order": [
@@ -430,6 +439,7 @@
     "product_category_Yhm3Cm",
     "product_brand_izKF7f",
     "best_seller_cDPBp9",
-    "featured_product_alt_byJV7z"
+    "featured_product_alt_byJV7z",
+    "featured_product_alt_p6UMXk"
   ]
 }
