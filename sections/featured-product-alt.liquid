@@ -66,31 +66,35 @@
                 </div>
 
                 <div class="product-cart-btn">
-
-
-
+                  {% assign selectedVariant = product.selected_or_first_available_variant %}
+                  {% comment %} {{ selectedVariant.id }} {% endcomment %}
                   {% form 'product', product %}
-                    <label class="product-option">Options</label>
-                    <select class="product-select" name="id">
-                      {% for variant in product.variants %}
-                        <option
-                          {% if selectedVariant.id == variant.id %}
-                            selected
-                          {% endif %}
-                          value="{{ variant.id }}"
-                        >
-                          {{ variant.title }}
-                        </option>
-                      {% endfor %}
-                    </select>
+                    {% comment %}
+                      <label class="product-option">Options</label>
+                         <select class="product-select" name="id">
+                          {% for variant in product.variants %}
+                            <option
+                              {% if selectedVariant.id == variant.id %}
+                                selected
+                              {% endif %}
+                              value="{{ variant.id }}"
+                            >
+                              {{ variant.title }}
+                            </option>
+                          {% endfor %}
+                        </select>
+                    {% endcomment %}
+                    <input type="hidden" name="quantity" id="quantity" value="1">
+                    <input type="hidden" name="id" id="variant_id" value="{{ selectedVariant.id }}">
+                    {% comment %}
+                       <div class="product-quantity">
+                        <label for="quantity">Quantity</label>
+                        <input type="hidden" name="quantity" id="quantity" value="1">
+                      </div>
+                    {% endcomment %}
 
-                    <div class="product-quantity">
-                      <label for="quantity">Quantity</label>
-                      <input name="quantity" id="quantity" value="1">
-                    </div>
-
-                    <button class="button product-add" type="submit">Add to cart</button>
-                    <p class="added-to-cart"></p>
+                    <button class="button product-add product-btn" type="submit">Add To Cart</button>
+                    {% comment %} <p class="added-to-cart"></p> {% endcomment %}
                   {% endform %}
 
                   {% comment %} <a href="cart.html" class="product-btn">Add To Cart</a> {% endcomment %}
@@ -102,41 +106,38 @@
       </div>
     </div>
   </div>
-
-  
 </section>
-<script>  
-const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
+<script>
+  const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
 
-addToCartForms.forEach((form) => {
-  form.addEventListener("submit", async (event) => {
-    // Prevent normal submission
-    event.preventDefault();
+  addToCartForms.forEach((form) => {
+    form.addEventListener('submit', async (event) => {
+      // Prevent normal submission
+      event.preventDefault();
 
-    // Submit form with ajax
-    await fetch("/cart/add", {
-      method: "post",
-      body: new FormData(form),
+      // Submit form with ajax
+      await fetch('/cart/add', {
+        method: 'post',
+        body: new FormData(form),
+      });
+
+      // Get new cart object
+      const res = await fetch('/cart.json');
+      const cart = await res.json();
+
+      // Update cart count
+      document.querySelectorAll('.cart-count-bubble span').forEach((el) => {
+        el.textContent = cart.item_count;
+      });
+
+      // Display message
+      {% comment %} const message = document.createElement('p');
+      message.classList.add('added-to-cart');
+      message.textContent = 'Added to cart!';
+      form.appendChild(message); {% endcomment %}
     });
-
-    // Get new cart object
-    const res = await fetch("/cart.json");
-    const cart = await res.json();
-
-    // Update cart count
-    document.querySelectorAll(".cart-count-bubble span").forEach((el) => {
-      el.textContent = cart.item_count;
-    });
-
-    // Display message
-    const message = document.createElement("p");
-    message.classList.add("added-to-cart");
-    message.textContent = "Added to cart!";
-    form.appendChild(message);
   });
-});
-
-</script> 
+</script>
 
 {% schema %}
 {
