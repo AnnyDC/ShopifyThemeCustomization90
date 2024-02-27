@@ -21,7 +21,9 @@
       {% for block in section.blocks %}
         <div class="product-wrapper" data-aos="fade-right" data-aos-duration="100">
           <div class="wrapper-img">
-            <img src="{{ block.settings.image | image_url }}" alt="dress">
+            {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image | image_url }}" alt="dress">
+            {% endif %}
           </div>
           <div class="wrapper-info">
             {% if block.settings.coll_label != blank %}
