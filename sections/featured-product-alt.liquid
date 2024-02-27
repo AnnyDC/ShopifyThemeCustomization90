@@ -66,10 +66,32 @@
                 </div>
 
                 <div class="product-cart-btn">
-                  <form method="post" action="/cart/add">
-                    <input name="id" value="{{ product.variants.first.id }}" type="hidden">
-                    <input name="add" value="Add To Cart" class="product-btn" type="submit">
-                  </form>
+
+
+
+                  {% form 'product', product %}
+                    <label class="product-option">Options</label>
+                    <select class="product-select" name="id">
+                      {% for variant in product.variants %}
+                        <option
+                          {% if selectedVariant.id == variant.id %}
+                            selected
+                          {% endif %}
+                          value="{{ variant.id }}"
+                        >
+                          {{ variant.title }}
+                        </option>
+                      {% endfor %}
+                    </select>
+
+                    <div class="product-quantity">
+                      <label for="quantity">Quantity</label>
+                      <input name="quantity" id="quantity" value="1">
+                    </div>
+
+                    <button class="button product-add" type="submit">Add to cart</button>
+                    <p class="added-to-cart"></p>
+                  {% endform %}
 
                   {% comment %} <a href="cart.html" class="product-btn">Add To Cart</a> {% endcomment %}
                 </div>
@@ -80,7 +102,41 @@
       </div>
     </div>
   </div>
+
+  
 </section>
+<script>  
+const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
+
+addToCartForms.forEach((form) => {
+  form.addEventListener("submit", async (event) => {
+    // Prevent normal submission
+    event.preventDefault();
+
+    // Submit form with ajax
+    await fetch("/cart/add", {
+      method: "post",
+      body: new FormData(form),
+    });
+
+    // Get new cart object
+    const res = await fetch("/cart.json");
+    const cart = await res.json();
+
+    // Update cart count
+    document.querySelectorAll(".cart-count-bubble span").forEach((el) => {
+      el.textContent = cart.item_count;
+    });
+
+    // Display message
+    const message = document.createElement("p");
+    message.classList.add("added-to-cart");
+    message.textContent = "Added to cart!";
+    form.appendChild(message);
+  });
+});
+
+</script> 
 
 {% schema %}
 {
