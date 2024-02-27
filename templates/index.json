@@ -380,9 +380,10 @@
     "featured_product_alt_byJV7z": {
       "type": "featured-product-alt",
       "settings": {
-        "heading": "",
-        "button_label": "",
-        "button_link": ""
+        "heading": "Flash Sale",
+        "button_label": "View All",
+        "button_link": "shopify:\/\/collections\/jacket-men",
+        "collection_link": "jacket-men"
       }
     }
   },
