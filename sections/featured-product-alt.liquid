@@ -68,7 +68,7 @@
                 <div class="product-cart-btn">
                   <form method="post" action="/cart/add">
                     <input name="id" value="{{ product.variants.first.id }}" type="hidden">
-                    <input name="add" value="Add To Cart" type="submit">
+                    <input name="add" value="Add To Cart" class="product-btn" type="submit">
                   </form>
 
                   {% comment %} <a href="cart.html" class="product-btn">Add To Cart</a> {% endcomment %}
