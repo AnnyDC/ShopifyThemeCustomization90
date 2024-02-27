@@ -14,8 +14,8 @@
     <div class="flash-sale-section">
       <div class="row g-5">
         {% if section.settings.collection_link != blank %}
-          {{ section.settings.collection_link.handle }}
-        {%- assign collection = collections['{{ section.settings.collection_link.handle }}'] -%}
+          {% assign coll_handle = section.settings.collection_link.handle %}
+          {% assign collection = collections['coll_handle'] %}
           {% for product in collection.products %} 
           <div class="col-lg-3 col-md-6">
             <div class="product-wrapper" data-aos="fade-right" data-aos-duration="100">
