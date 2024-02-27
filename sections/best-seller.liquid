@@ -7,8 +7,9 @@
             {% endif %}
             {% if section.settings.button_label != blank %}
                 <a href="{{ section.settings.button_link }}" class="view">{{ section.settings.button_label }}</a>
-            </div>
             {% endif %}
+            </div>
+            
             <div class="best-selling-items">
               {% for block in section.blocks %}
                 <div class="product-wrapper">
