@@ -57,7 +57,7 @@
       {%- for block in section.blocks -%}
         <swiper-slide
           class=" hero-slider-three swiper-slide-visible"
-          style="background-image:url('{{ block.settings.image.src | image_url   }}');"
+          style="background-image:url('{{ block.settings.image | image_url   }}');"
         >
           <div class="container">
             <div class="col-lg-6">
