@@ -86,7 +86,25 @@
           <!-- End Search Part -->
 
           <div class="header-cart">
-            <a href="cart.html" class="cart-item">
+            <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+              {%- liquid
+                if cart == empty
+                  render 'icon-cart-empty'
+                else
+                  render 'icon-cart'
+                endif
+              -%}
+              <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+              {%- if cart != empty -%}
+                <div class="cart-count-bubble">
+                  {%- if cart.item_count < 100 -%}
+                    <span aria-hidden="true">{{ cart.item_count }}</span>
+                  {%- endif -%}
+                  <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+                </div>
+              {%- endif -%}
+            </a>
+            {% comment %} <a href="cart.html" class="cart-item">
               <span>
                 <svg width="35" height="28" viewBox="0 0 35 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -109,7 +127,7 @@
                 </svg>
               </span>
               <span class="cart-text"> Cart </span>
-            </a>
+            </a> {% endcomment %}
             <div class="cart-submenu">
               <div class="cart-wrapper-item">
                 <div class="wrapper">
