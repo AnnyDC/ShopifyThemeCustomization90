@@ -102,13 +102,13 @@
                       fill="#6E6D79"
                   />
                   <circle cx="26.9523" cy="8" r="8" fill="#AE1C9A" />
-                  {%- liquid
+                  <!-- {%- liquid
                 if cart == empty
                   render 'icon-cart-empty'
                 else
                   render 'icon-cart'
                 endif
-              -%}
+              -%} -->
               <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
               {%- if cart != empty -%}
                 <div class="cart-count-bubble">
