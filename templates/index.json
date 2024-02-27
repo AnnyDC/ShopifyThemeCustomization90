@@ -424,6 +424,9 @@
     },
     "featured_product_alt_byJV7z": {
       "type": "featured-product-alt",
+      "custom_css": [
+        ".flash-sale {background: linear-gradient(90deg, #FBD7E9 0%, #FFD7AB 100%);}"
+      ],
       "settings": {
         "heading": "Flash Sale",
         "button_label": "View All",
