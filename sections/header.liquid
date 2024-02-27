@@ -102,10 +102,7 @@
                       fill="#6E6D79"
                   />
                   <circle cx="26.9523" cy="8" r="8" fill="#AE1C9A" />
-                  
-                </svg>
-              </span>
-              {%- liquid
+                  {%- liquid
                 if cart == empty
                   render 'icon-cart-empty'
                 else
@@ -121,6 +118,9 @@
                   <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
                 </div>
               {%- endif -%}
+                </svg>
+              </span>
+              
               <span class="cart-text"> Cart </span>
             </a>
             {% comment %} <a href="cart.html" class="cart-item">
