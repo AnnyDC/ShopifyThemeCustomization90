@@ -346,6 +346,26 @@
         "button_label": "View All",
         "button_link": "shopify:\/\/collections"
       }
+    },
+    "best_seller_tcULFL": {
+      "type": "best-seller",
+      "blocks": {
+        "text_DUEpQB": {
+          "type": "text",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_DUEpQB"
+      ],
+      "settings": {
+        "heading": "",
+        "button_label": "",
+        "button_link": ""
+      }
     }
   },
   "order": [
@@ -353,6 +373,7 @@
     "hero_banner_Gkxtax",
     "product_fashion_f7Vp7e",
     "product_category_Yhm3Cm",
-    "product_brand_izKF7f"
+    "product_brand_izKF7f",
+    "best_seller_tcULFL"
   ]
 }
