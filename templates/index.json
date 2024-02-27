@@ -365,16 +365,25 @@
             "button_label": "",
             "button_link": ""
           }
+        },
+        "text_BkYNew": {
+          "type": "text",
+          "settings": {
+            "svg_img": "",
+            "button_label": "",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
         "text_twCWJX",
-        "text_kjtDyx"
+        "text_kjtDyx",
+        "text_BkYNew"
       ],
       "settings": {
-        "heading": "",
-        "button_label": "",
-        "button_link": ""
+        "heading": "Best Sellers",
+        "button_label": "View All",
+        "button_link": "#"
       }
     },
     "featured_product_alt_byJV7z": {
