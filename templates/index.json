@@ -415,6 +415,9 @@
     },
     "featured_product_alt_p6UMXk": {
       "type": "featured-product-alt",
+      "custom_css": [
+        ".flash-sale {background: rgba(174, 28, 154, .08);}"
+      ],
       "settings": {
         "heading": "NEW ARRIVALS",
         "button_label": "View All",
@@ -424,6 +427,9 @@
     },
     "featured_product_alt_byJV7z": {
       "type": "featured-product-alt",
+      "custom_css": [
+        ".flash-sale {background: linear-gradient(90deg, #fbd7e9 0%, #ffd7ab 100%);}"
+      ],
       "settings": {
         "heading": "Flash Sale",
         "button_label": "View All",
