@@ -347,10 +347,10 @@
         "button_link": "shopify:\/\/collections"
       }
     },
-    "best_seller_tcULFL": {
+    "best_seller_cDPBp9": {
       "type": "best-seller",
       "blocks": {
-        "text_DUEpQB": {
+        "text_twCWJX": {
           "type": "text",
           "settings": {
             "button_label": "",
@@ -359,7 +359,7 @@
         }
       },
       "block_order": [
-        "text_DUEpQB"
+        "text_twCWJX"
       ],
       "settings": {
         "heading": "",
@@ -374,6 +374,6 @@
     "product_fashion_f7Vp7e",
     "product_category_Yhm3Cm",
     "product_brand_izKF7f",
-    "best_seller_tcULFL"
+    "best_seller_cDPBp9"
   ]
 }
