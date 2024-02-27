@@ -373,12 +373,21 @@
             "button_label": "Toaksiua",
             "button_link": "#"
           }
+        },
+        "text_TXDi8P": {
+          "type": "text",
+          "settings": {
+            "svg_img": "<svg width=\"76\" height=\"79\" viewbox=\"0 0 76 79\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n                                    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M65.4838 78.9945H53.3666H42.8559V68.4116V60.2487H27.9269H22.6334V49.6659H42.8559H47.7403H48.1112H53.3666V60.2487V68.4116H65.4865V62.6496V40.496V25.3693L42.8559 12.2237V0.0027465L54.373 6.6894L76 19.2534V40.4987V44.3785V62.6551V68.4171V79H65.4838V78.9945ZM10.5135 25.3666L22.6334 18.3232V22.3649V28.5165V39.0829H27.8888H28.2597H33.1441H53.3666V28.5165H48.0758H33.1441V22.3649V12.2209C33.1441 8.14634 33.1441 4.07183 33.1441 0C29.6396 2.04414 26.1351 4.07457 22.6334 6.10225L21.6297 6.68665L0 19.2479V40.4932V44.373V62.6496V78.9945H10.5135V62.6496V40.496V25.3666Z\" fill=\"#3AB57F\"><\/path>\n                                <\/svg>",
+            "button_label": "Rouaop",
+            "button_link": "#"
+          }
         }
       },
       "block_order": [
         "text_twCWJX",
         "text_kjtDyx",
-        "text_BkYNew"
+        "text_BkYNew",
+        "text_TXDi8P"
       ],
       "settings": {
         "heading": "Best Sellers",
