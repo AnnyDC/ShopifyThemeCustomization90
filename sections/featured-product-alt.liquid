@@ -15,6 +15,7 @@
       <div class="row g-5">
         {% if section.settings.collection_link != blank %}
           {% assign coll_handle = section.settings.collection_link.handle %}
+        {{ coll_handle }}
           {% assign collection = collections['coll_handle'] %}
           {% for product in collection.products %} 
           <div class="col-lg-3 col-md-6">
