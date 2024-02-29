@@ -17,8 +17,9 @@
       <div class="row g-5">
         {% if section.settings.collection_link != blank %}
           {% assign collection = collections[section.settings.collection_link] %}
-          <!-- {{ collection.handle }} -->
-          {% for product in collection.products %}
+          {% assign product_limit = section.serrings.product_limit %}
+
+          {% for product in collection.products limit:{{product_limit}} %}
             <div class="col-lg-3 col-md-6">
               <div class="product-wrapper" data-aos="fade-right" data-aos-duration="100">
                 <div class="product-img">
@@ -64,37 +65,14 @@
                     </div>
                   </div>
                 </div>
-<br>
+                <br>
                 <div class="product-cart-btn">
                   {% assign selectedVariant = product.selected_or_first_available_variant %}
                   {% comment %} {{ selectedVariant.id }} {% endcomment %}
                   {% form 'product', product %}
-                    {% comment %}
-                      <label class="product-option">Options</label>
-                         <select class="product-select" name="id">
-                          {% for variant in product.variants %}
-                            <option
-                              {% if selectedVariant.id == variant.id %}
-                                selected
-                              {% endif %}
-                              value="{{ variant.id }}"
-                            >
-                              {{ variant.title }}
-                            </option>
-                          {% endfor %}
-                        </select>
-                    {% endcomment %}
                     <input type="hidden" name="quantity" id="quantity" value="1">
                     <input type="hidden" name="id" id="variant_id" value="{{ selectedVariant.id }}">
-                    {% comment %}
-                       <div class="product-quantity">
-                        <label for="quantity">Quantity</label>
-                        <input type="hidden" name="quantity" id="quantity" value="1">
-                      </div>
-                    {% endcomment %}
-
                     <button class="button product-add product-btn" type="submit">Add To Cart</button>
-                    {% comment %} <p class="added-to-cart"></p> {% endcomment %}
                   {% endform %}
 
                   {% comment %} <a href="cart.html" class="product-btn">Add To Cart</a> {% endcomment %}
@@ -166,6 +144,25 @@
       "type": "collection",
       "id": "collection_link",
       "label": "Collection"
+    },
+    {
+      "type": "radio",
+      "id": "product_limit",
+      "label": "Product Limit",
+      "options": [
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "8",
+          "label": "8"
+        },
+        {
+          "value": "16",
+          "label": "16"
+        }
+      ]
     }
   ],
   "blocks": [],
