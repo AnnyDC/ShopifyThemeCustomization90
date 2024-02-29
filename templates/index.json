@@ -85,7 +85,8 @@
             "heading_details": "Get 65% Offer <span class=\"wrapper-inner-title\">& Make New<\/span> Fusion.",
             "heading_sub_title": "NEW STYLE",
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/hat"
+            "button_link": "shopify:\/\/collections\/hat",
+            "desc_position": "top_right"
           }
         },
         "text_jmgE94": {
@@ -95,7 +96,8 @@
             "heading_details": "Make your New<span class=\"wrapper-inner-title\">Styles with Our<\/span>Products",
             "heading_sub_title": "Mega OFFER",
             "button_label": "hop Now",
-            "button_link": "shopify:\/\/collections\/hat-gloves"
+            "button_link": "shopify:\/\/collections\/hat-gloves",
+            "desc_position": "top_right"
           }
         }
       },
@@ -462,7 +464,8 @@
             "heading_details": "Get 65% Offer <span class=\"wrapper-inner-title\">& Make New<\/span> Fusion.",
             "heading_sub_title": "NEW STYLE",
             "button_label": "Shop Now",
-            "button_link": "#"
+            "button_link": "#",
+            "desc_position": "top_right"
           }
         },
         "text_bm9ndf": {
@@ -472,7 +475,8 @@
             "heading_details": "Make your New <span class=\"wrapper-inner-title\">Styles with Our<\/span> Products",
             "heading_sub_title": "Mega OFFER",
             "button_label": "Shop Now",
-            "button_link": "#"
+            "button_link": "#",
+            "desc_position": "top_left"
           }
         }
       },
