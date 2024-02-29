@@ -477,6 +477,9 @@
         "text_CMfzgh",
         "text_bm9ndf"
       ],
+      "custom_css": [
+        ".fashion-style {background: linear-gradient(90deg, #f9edf7 0%, #f9edf7 100%);}"
+      ],
       "settings": {
         "heading": ""
       }
