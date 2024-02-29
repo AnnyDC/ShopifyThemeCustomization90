@@ -439,6 +439,9 @@
     },
     "featured_product_alt_eamgg9": {
       "type": "featured-product-alt",
+      "custom_css": [
+        ".flash-sale {background: linear-gradient(90deg, #f9edf7 0%, #F9EDF7 100%);}"
+      ],
       "settings": {
         "heading": "Best Sell in this Week",
         "button_label": "View All",
