@@ -422,7 +422,8 @@
         "heading": "NEW ARRIVALS",
         "button_label": "View All",
         "button_link": "shopify:\/\/collections\/hat-gloves",
-        "collection_link": "hat-gloves"
+        "collection_link": "hat-gloves",
+        "product_limit": "8"
       }
     },
     "featured_product_alt_byJV7z": {
@@ -434,7 +435,8 @@
         "heading": "Flash Sale",
         "button_label": "View All",
         "button_link": "shopify:\/\/collections\/jacket-men",
-        "collection_link": "jacket-men"
+        "collection_link": "jacket-men",
+        "product_limit": "4"
       }
     },
     "featured_product_alt_eamgg9": {
@@ -446,7 +448,8 @@
         "heading": "Best Sell in this Week",
         "button_label": "View All",
         "button_link": "shopify:\/\/collections\/hat",
-        "collection_link": "hat"
+        "collection_link": "hat",
+        "product_limit": "4"
       }
     },
     "product_fashion_gXh3XR": {
