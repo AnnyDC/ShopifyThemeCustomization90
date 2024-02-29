@@ -485,7 +485,8 @@
         "text_bm9ndf"
       ],
       "custom_css": [
-        ".fashion-style {background: linear-gradient(90deg, #f9edf7 0%, #f9edf7 100%);}"
+        ".fashion-style {background: linear-gradient(90deg, #f9edf7 0%, #f9edf7 100%);}",
+        ".wrapper-info.top-right {padding-left: 55%;}"
       ],
       "settings": {
         "heading": ""
