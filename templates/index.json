@@ -461,10 +461,21 @@
             "button_label": "Shop Now",
             "button_link": "#"
           }
+        },
+        "text_bm9ndf": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/style-bg-four_1.webp",
+            "heading_details": "Make your New <span class=\"wrapper-inner-title\">Styles with Our<\/span> Products",
+            "heading_sub_title": "Mega OFFER",
+            "button_label": "Shop Now",
+            "button_link": "#"
+          }
         }
       },
       "block_order": [
-        "text_CMfzgh"
+        "text_CMfzgh",
+        "text_bm9ndf"
       ],
       "settings": {
         "heading": ""
