@@ -9,7 +9,18 @@
               data-aos="fade-right"
               style="background-image:url('{{ block.settings.image | image_url }}');"
             >
-              <div class="wrapper-info">
+              <!-- Start dynamic class add for content position -->
+              {% if block.settings.desc_position == 'top_right' %}
+                {% assign add_class = 'top-right' %}
+              {% elsif block.settings.desc_position == 'top_left' %}
+                {% assign add_class = 'top-left' %}
+              {% elsif block.settings.desc_position == 'bottom_right' %}
+                {% assign add_class = 'bottom-right' %}
+              {% else %}
+                {% assign add_class = 'bottom_left' %}
+              {% endif %}
+              <!-- END -->
+              <div class="wrapper-info {{add_class}}">
                 <span class="wrapper-subtitle">{{ block.settings.heading_sub_title }}</span>
                 <h4 class="wrapper-details">
                   {{ block.settings.heading_details }}
@@ -116,6 +127,30 @@
           "type": "url",
           "id": "button_link",
           "label": "Button Link"
+        },
+        {
+          "type": "radio",
+          "id": "desc_position",
+          "label": "Content Position",
+          "options": [
+            {
+              "value": "top_right",
+              "label": "Top Right"
+            },
+            {
+              "value": "top_left",
+              "label": "Top Left"
+            },
+            {
+              "value": "bottom_right",
+              "label": "Bottom Right"
+            },
+            {
+              "value": "bottom_left",
+              "label": "Bottom Left"
+            }
+          ],
+          "default": "top_right"
         }
       ]
     }
