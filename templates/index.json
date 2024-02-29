@@ -416,7 +416,7 @@
     "featured_product_alt_p6UMXk": {
       "type": "featured-product-alt",
       "custom_css": [
-        ".flash-sale {background: rgba(174, 28, 154, .08);}"
+        ".flash-sale {background: rgba(174, 28, 154, 0.08);}"
       ],
       "settings": {
         "heading": "NEW ARRIVALS",
@@ -436,6 +436,53 @@
         "button_link": "shopify:\/\/collections\/jacket-men",
         "collection_link": "jacket-men"
       }
+    },
+    "featured_product_alt_eamgg9": {
+      "type": "featured-product-alt",
+      "custom_css": [
+        ".flash-sale {background: linear-gradient(90deg, #f9edf7 0%, #f9edf7 100%);}"
+      ],
+      "settings": {
+        "heading": "Best Sell in this Week",
+        "button_label": "View All",
+        "button_link": "shopify:\/\/collections\/hat",
+        "collection_link": "hat"
+      }
+    },
+    "product_fashion_gXh3XR": {
+      "type": "product-fashion",
+      "blocks": {
+        "text_CMfzgh": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/style-bg-three_1.webp",
+            "heading_details": "Get 65% Offer <span class=\"wrapper-inner-title\">& Make New<\/span> Fusion.",
+            "heading_sub_title": "NEW STYLE",
+            "button_label": "Shop Now",
+            "button_link": "#"
+          }
+        },
+        "text_bm9ndf": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/style-bg-four_1.webp",
+            "heading_details": "Make your New <span class=\"wrapper-inner-title\">Styles with Our<\/span> Products",
+            "heading_sub_title": "Mega OFFER",
+            "button_label": "Shop Now",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "text_CMfzgh",
+        "text_bm9ndf"
+      ],
+      "custom_css": [
+        ".fashion-style {background: linear-gradient(90deg, #f9edf7 0%, #f9edf7 100%);}"
+      ],
+      "settings": {
+        "heading": ""
+      }
     }
   },
   "order": [
@@ -446,6 +493,8 @@
     "product_brand_izKF7f",
     "best_seller_cDPBp9",
     "featured_product_alt_p6UMXk",
-    "featured_product_alt_byJV7z"
+    "featured_product_alt_byJV7z",
+    "featured_product_alt_eamgg9",
+    "product_fashion_gXh3XR"
   ]
 }
