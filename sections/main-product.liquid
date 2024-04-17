@@ -409,13 +409,29 @@
   }
   window.onload = pagealert();*/
   document.addEventListener('DOMContentLoaded', function (event) {
+
+    var product = {{ product | json }}
+
     document.querySelectorAll('.product-option input[type="radio"]').forEach((radio) => {
       radio.addEventListener('change', () => {
         var selectedOptions = [];
         document.querySelectorAll('.product-option input[type="radio"]:checked').forEach((radio) => {
           selectedOptions.push(radio.value);
         });
-        console.log(selectedOptions);
+        //console.log(selectedOptions);
+        var matchedVariant = product.variants.find(variant => {
+          var pass = true
+          for ( var i = 0; i < selectedOptions.length; i++ )
+            {
+              if (selectedOptions.indexOf(variant.options[i]) === -1)
+              {
+                pass = false
+                break
+              }
+            }
+            return pass
+        })
+        console.log(matchedVariant);
       });
     });
   });
