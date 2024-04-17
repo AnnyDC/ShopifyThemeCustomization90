@@ -18,7 +18,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide slider-top-img">
                   {% for image in product.images %}
-                    <img src="{{ image | image_url }}">
+                    <img src="{{ image | image_url }}" width="450" height="450">
                     <!-- <img src="./assets/images/homepage-one/product-img/product-img-14.webp" alt="img"> -->
                   {% endfor %}
                 </div>
@@ -403,8 +403,8 @@
   </div>
 </section>
 <script>
-   {% comment %} var product ={{ product | json }} {% endcomment %}
-   {% comment %} console.log(product); {% endcomment %}
+   var product ={{ product | json }}
+   console.log(product);
    {% comment %} function pagealert()
    {
      alert('ok');
