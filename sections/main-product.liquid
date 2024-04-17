@@ -148,7 +148,12 @@
               </div>
             {% endcomment %}
             {% form 'product', product %}
-              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              <input
+                type="hidden"
+                name="id"
+                id="product-id"
+                value="{{ product.selected_or_first_available_variant.id }}"
+              >
 
               <div class="product-size product-option">
                 {% if product.variants.size > 1 %}
@@ -414,11 +419,15 @@
 
     document.querySelectorAll('.product-option input[type="radio"]').forEach((radio) => {
       radio.addEventListener('change', () => {
+
+        // Find Selected Options
         var selectedOptions = [];
         document.querySelectorAll('.product-option input[type="radio"]:checked').forEach((radio) => {
           selectedOptions.push(radio.value);
         });
+
         //console.log(selectedOptions);
+        // Find Matched Variants
         var matchedVariant = product.variants.find(variant => {
           var pass = true
           for ( var i = 0; i < selectedOptions.length; i++ )
@@ -431,7 +440,17 @@
             }
             return pass
         })
-        console.log(matchedVariant);
+
+        //console.log(matchedVariant);
+        // Find Product From Variant ID
+        document.querySelector('#product-id').value = matchedVariant.id
+
+        //Change URL
+        var url = new URLParse(window.location.href, true)
+        url.query.variant = matchedVariant.id
+        window.history.replaceState(null, null, url.toString())
+        //console.log(url.toString());
+
       });
     });
   });
