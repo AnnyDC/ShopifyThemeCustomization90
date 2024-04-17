@@ -133,9 +133,13 @@
                 <span class="text">6 Reviews</span>
               </div>
             {% endcomment %}
-            <div class="price">
-              <span class="price-cut">{{ product.compare_at_price | money }}</span>
-              <span class="new-price">{{ product.selected_or_first_available_variant.price | money }}</span>
+            <div class="price product-prices">
+              <span class="price-cut product-compare {% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}hide{% endunless %}">
+                {{- product.selected_or_first_available_variant.compare_at_price | money -}}
+              </span>
+              <span class="new-price product-price">
+                {{- product.selected_or_first_available_variant.price | money -}}
+              </span>
             </div>
             <div class="product-description">
               {{ product.description }}
@@ -451,6 +455,9 @@
         window.history.replaceState(null, null, url.toString())
         //console.log(url.toString());
 
+        // Change Prices
+        document.querySelector('.product-price').textContent = formatMoney(matchedVariant.price, "{{ shop.money_format }}")
+        document.querySelector('.product-compare').textContent = formatMoney(matchedVariant.compare_at_price, "{{ shop.money_format }}")
       });
     });
   });

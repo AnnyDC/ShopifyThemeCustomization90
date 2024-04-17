@@ -47,6 +47,9 @@
     <!-- ------------- additional-css -------------- -->
     {{ 'style.css' | asset_url | stylesheet_tag }}
 
+    <!-- ------------- custom-css -------------- -->
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+
     <!-- ------------- jQuery -------------- -->
     <script src="{{ 'jquery_3.7.1.min.js' | asset_url }}"></script>
 
@@ -67,6 +70,9 @@
 
     <!-- ------------- Url Parse-Js -------------- -->
     <script src="https://cdn.jsdelivr.net/npm/url-parse@1.5.10/dist/url-parse.min.js"></script>
+
+    <!-- ------------- Shopify format Money function-Js -------------- -->
+    <script src="{{ 'shopify-money.js' | asset_url }}"></script>
 
     {{ content_for_header }}
   </head>
