@@ -134,16 +134,12 @@
               </div>
             {% endcomment %}
             <div class="price">
-              <span class="price-cut">{{ product.compare_at_price.price | money }}</span>
+              <span class="price-cut">{{ product.compare_at_price | money }}</span>
               <span class="new-price">{{ product.selected_or_first_available_variant.price | money }}</span>
             </div>
-            <p class="content-paragraph">
-              <!--
-                It is a long established fact that a reader will be distracted by
-                <span class="inner-text">the readable there content of a page.</span>
-              -->
+            <div class="product-description">
               {{ product.description }}
-            </p>
+            </div>
             <hr>
             {% comment %}
               <div class="product-availability">
@@ -151,29 +147,48 @@
                 <span class="inner-text">132 Products Available</span>
               </div>
             {% endcomment %}
-
-            {{ sfdcfdsds }}
             {% form 'product', product %}
               <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
               <div class="product-size product-option">
                 {% if product.variants.size > 1 %}
                   {% for option in product.options_with_values %}
-                    {{ option.name }}
+                    <fieldset>
+                      <legend>{{ option.name }}</legend>
 
-                    <div class="" id="variantSec">
                       {% for value in option.values %}
-                        <input
-                          {% if option.selected_value == value %}
-                            checked
-                          {% endif %}
-                          type="radio"
-                          name="{{ option.name }}"
-                          value="{{ value }}"
-                          id="{{ option.name | handleize }}-{{ value | handleize }}"
-                        >
-                        <label for="{{ option.name | handleize }}-{{ value | handleize }}"> {{ value }} </label>
+                        <div>
+                          <input
+                            {% if option.selected_value == value %}
+                              checked
+                            {% endif %}
+                            type="radio"
+                            name="{{ option.name }}"
+                            value="{{ value }}"
+                            id="{{ option.name | handleize }}-{{ value | handleize }}"
+                          >
+                          <label for="{{ option.name | handleize }}-{{ value | handleize }}"> {{ value }} </label>
+                        </div>
                       {% endfor %}
-                    </div>
+                    </fieldset>
+
+                    {% comment %}
+                      <div class="" id="variantSec">
+                        {% for value in option.values %}
+
+                          <input
+                            {% if option.selected_value == value %}
+                              checked
+                            {% endif %}
+                            type="radio"
+                            name="{{ option.name }}"
+                            value="{{ value }}"
+                            id="{{ option.name | handleize }}-{{ value | handleize }}"
+                          >
+                          <label for="{{ option.name | handleize }}-{{ value | handleize }}"> {{ value }} </label>
+                        {% endfor %}
+                      </div>
+                    {% endcomment %}
                   {% endfor %}
                 {% endif %}
                 {% comment %} <P class="size-title">Variant</P> {% endcomment %}
