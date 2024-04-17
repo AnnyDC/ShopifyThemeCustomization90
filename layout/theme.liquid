@@ -47,7 +47,7 @@
 
     <!-- -------------------- Scroll ----------------- -->
     {% comment %} <link rel="stylesheet" href="css/aos-3.0.0.css"> {% endcomment %}
-    {{ 'aos-3.0.0.css' | asset_url | stylesheet_tag }}
+    {% comment %} {{ 'aos-3.0.0.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
     <!-- ------------- additional-css -------------- -->
     {% comment %} <link rel="stylesheet" href="./css/style.css"> {% endcomment %}
@@ -55,11 +55,13 @@
 
     <!-- ------------- jQuery -------------- -->
     {% comment %} <script src="assets/js/jquery_3.7.1.min.js"></script> {% endcomment %}
-    {{ 'jquery_3.7.1.min.js' | asset_url | script_tag }}
+    <script src="{{ 'jquery_3.7.1.min.js' | asset_url }}"></script>
+    {% comment %} {{ 'jquery_3.7.1.min.js' | asset_url | script_tag }} {% endcomment %}
 
     <!-- ------------- bootstrap-js -------------- -->
     {% comment %} <script src="assets/js/bootstrap_5.3.2.bundle.min.js"></script> {% endcomment %}
-    {{ 'bootstrap_5.3.2.bundle.min.js' | asset_url | script_tag }}
+    {% comment %} {{ 'bootstrap_5.3.2.bundle.min.js' | asset_url | script_tag }} {% endcomment %}
+    <script src="{{ 'bootstrap_5.3.2.bundle.min.js' | asset_url }}"></script>
 
     <!-- ------------- Range-Slider-js -------------- -->
     {% comment %} <script src="assets/js/nouislider.min.js"></script> {% endcomment %}
@@ -67,7 +69,7 @@
 
     <!-- ------------- scroll-Animation-js -------------- -->
     {% comment %} <script src="assets/js/aos-3.0.0.js"></script> {% endcomment %}
-    {{ 'aos-3.0.0.js' | asset_url | script_tag }}
+    {% comment %} {{ 'aos-3.0.0.js' | asset_url | script_tag }} {% endcomment %}
 
     <!-- ------------- swiper-js -------------- -->
     {% comment %} <script src="assets/js/swiper10-bundle.min.js"></script> {% endcomment %}
@@ -75,7 +77,7 @@
 
     <!-- ------------- additional-js -------------- -->
     {% comment %} <script src="assets/js/shopus.js"></script> {% endcomment %}
-    {{ 'shopus.js' | asset_url | script_tag }}
+    {% comment %} {{ 'shopus.js' | asset_url | script_tag }} {% endcomment %}
 
     {{ content_for_header }}
   </head>
