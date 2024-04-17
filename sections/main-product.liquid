@@ -403,21 +403,22 @@
   </div>
 </section>
 <script>
-   var product ={{ product | json }}
-   console.log(product);
-   {% comment %} function pagealert()
-   {
-     alert('ok');
-   } {% endcomment %}
-  {% comment %} window.onload = pagealert(); {% endcomment %}
-    document.addEventListener("DOMContentLoaded", function(event) {
-      {% comment %} document.getElementById("variantSec").click(alert('hi')); {% endcomment %}
-      document.querySelectorAll('.product-option input[type="radio"]').forEach(radio =>{
-        radio.addEventListener('change', () => {
-          console.log('hey')
-        })
-      })
+  /*function pagealert()
+  {
+    alert('ok');
+  }
+  window.onload = pagealert();*/
+  document.addEventListener('DOMContentLoaded', function (event) {
+    document.querySelectorAll('.product-option input[type="radio"]').forEach((radio) => {
+      radio.addEventListener('change', () => {
+        var selectedOptions = [];
+        document.querySelectorAll('.product-option input[type="radio"]:checked').forEach((radio) => {
+          selectedOptions.push(radio.value);
+        });
+        console.log(selectedOptions);
+      });
     });
+  });
 </script>
 
 {% schema %}
