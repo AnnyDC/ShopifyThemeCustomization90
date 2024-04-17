@@ -134,12 +134,14 @@
               </div>
             {% endcomment %}
             <div class="price">
-              <span class="price-cut">$9.99</span>
+              <span class="price-cut">{{ product.compare_at_price.price | money }}</span>
               <span class="new-price">{{ product.selected_or_first_available_variant.price | money }}</span>
             </div>
             <p class="content-paragraph">
-              It is a long established fact that a reader will be distracted by
-              <span class="inner-text">the readable there content of a page.</span>
+              <!--
+                It is a long established fact that a reader will be distracted by
+                <span class="inner-text">the readable there content of a page.</span>
+              -->
               {{ product.description }}
             </p>
             <hr>
@@ -150,7 +152,7 @@
               </div>
             {% endcomment %}
 
-            {{ sfdcfd }}
+            {{ sfdcfdsds }}
             {% form 'product', product %}
               <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
               <div class="product-size product-option">
