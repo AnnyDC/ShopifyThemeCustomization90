@@ -459,9 +459,10 @@
         document.querySelector('.product-price').textContent = formatMoney(matchedVariant.price, "{{ shop.money_format }}")
         document.querySelector('.product-compare').textContent = formatMoney(matchedVariant.compare_at_price, "{{ shop.money_format }}")
 
+        var comparePrice = document.querySelector('.product-compare')
         matchedVariant.compare_at_price > matchedVariant.price ?
-          document.querySelector('.product-compare').classList.remove('hide')
-          document.querySelector('.product-compare').classList.add('hide')
+          comparePrice.classList.remove('hide')
+          comparePrice.classList.add('hide')
       });
     });
   });
