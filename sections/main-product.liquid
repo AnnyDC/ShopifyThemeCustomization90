@@ -10,7 +10,7 @@
     <div class="product-info-section">
       <div class="row ">
         <div class="col-md-6">
-          <div class="product-info-img" data-aos="fade-right">
+          <div class="product-info-img">
             <div class="swiper product-top">
               <div class="product-discount-content">
                 <h4>-50%</h4>
@@ -19,17 +19,17 @@
                 <div class="swiper-slide slider-top-img">
                   {% if product.selected_or_first_available_variant.featured_image %}
                     {% assign featured = product.selected_or_first_available_variant.featured_image %}
-                    <img src="{{ featured | image_url }}">
+                    <img id="product-image" src="{{ featured | image_url }}">
 
                   {% else %}
                     {% assign featured = product.featured_image %}
-                    <img src="{{ featured | image_url }}">
+                    <img id="product-image" src="{{ featured | image_url }}">
                   {% endif %}
 
                   <ul class="product-image-thumbs">
                     {% for image in product.images %}
                       <li class="{% if image == featured %}selected{% endif %}">
-                        <img id="product-image" src="{{ image | image_url : master}}">
+                        <img src="{{ image | image_url : master}}">
                       </li>
                     {% endfor %}
                   </ul>
