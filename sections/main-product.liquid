@@ -482,6 +482,10 @@
     document.querySelectorAll('.product-image-thumbs li').forEach(li => {
       li.addEventListener('click', () => {
         document.querySelector('.product-image-thumbs li.selected').classList.remove('selected')
+        li.classList.add('selected')
+
+        document.querySelector('#product-image').setAttribute('src', li.querySelector('img').getAttribute('src'))
+
       })
     })
 
