@@ -17,10 +17,22 @@
               </div>
               <div class="swiper-wrapper">
                 <div class="swiper-slide slider-top-img">
-                  {% for image in product.images %}
-                    <img src="{{ image | image_url }}" width="450" height="450">
-                    <!-- <img src="./assets/images/homepage-one/product-img/product-img-14.webp" alt="img"> -->
-                  {% endfor %}
+                  {% if product.selected_or_first_available_variant.featured_image %}
+                    {% assign featured = product.selected_or_first_available_variant.featured_image %}
+                    <img src="{{ featured | image_url }}">
+
+                  {% else %}
+                    {% assign featured = product.featured_image %}
+                    <img src="{{ featured | image_url }}">
+                  {% endif %}
+
+                  <ul class="product-image-thumbs">
+                    {% for image in product.images %}
+                      <li class="{% if image == featured %}selected{% endif %}">
+                        <img id="product-image" src="{{ image | image_url : master}}">
+                      </li>
+                    {% endfor %}
+                  </ul>
                 </div>
                 {% comment %}
                   <div class="swiper-slide slider-top-img">
@@ -464,6 +476,15 @@
           document.querySelector('.product-compare').classList.add('hide')
       });
     });
+
+    //=============================//
+
+    document.querySelectorAll('.product-image-thumbs li').forEach(li => {
+      li.addEventListener('click', () => {
+        document.querySelector('.product-image-thumbs li.selected').classList.remove('selected')
+      })
+    })
+
   });
 </script>
 
