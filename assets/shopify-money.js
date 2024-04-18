@@ -1,9 +1,7 @@
-var Shopify = Shopify || {};
 // ---------------------------------------------------------------------------
 // Money format handler
 // ---------------------------------------------------------------------------
-Shopify.money_format = "${{amount}}";
-Shopify.formatMoney = function(cents, format) {
+var formatMoney = function(cents, format) {
   if (typeof cents == 'string') { cents = cents.replace('.',''); }
   var value = '';
   var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
