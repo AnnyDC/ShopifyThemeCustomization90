@@ -474,18 +474,26 @@
         matchedVariant.compare_at_price > matchedVariant.price ?
           document.querySelector('.product-compare').classList.remove('hide') :
           document.querySelector('.product-compare').classList.add('hide')
+
+        // Change Image
+        if (matchedVariant.featured_image)
+        {
+          document.querySelector('#product-image').setAttribute('src', matchedVariant.featured_image.src)
+          document.querySelector('.product-image-thumbs li.selected').classList.remove('selected')
+          console.log(matchedVariant.featured_image)
+        }
+
       });
     });
 
     //=============================//
 
+    // Change Image
     document.querySelectorAll('.product-image-thumbs li').forEach(li => {
       li.addEventListener('click', () => {
         document.querySelector('.product-image-thumbs li.selected').classList.remove('selected')
         li.classList.add('selected')
-
         document.querySelector('#product-image').setAttribute('src', li.querySelector('img').getAttribute('src'))
-
       })
     })
 
