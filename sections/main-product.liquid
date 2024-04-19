@@ -29,7 +29,7 @@
                   <ul class="product-image-thumbs">
                     {% for image in product.images %}
                       <li class="{% if image == featured %}selected{% endif %}">
-                        <img src="{{ image | image_url : master}}">
+                        <img src="{{ image | image_url }}" height="100" width="100">
                       </li>
                     {% endfor %}
                   </ul>
