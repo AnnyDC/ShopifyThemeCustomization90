@@ -2,7 +2,7 @@
 
 A development-store project for Anny's custom Shopify theme: choose a variant, personalize a gift, update an AJAX cart, place a test order, and deliver its personalization to a local mock CRM.
 
-Branch: `interview-demo/personalized-products`. This branch is separate from Shopify-mapped `main`; no merge into `main` or theme publication has been performed. The repository copy is uploaded as unpublished theme `167193444515` (Interview personalized demo).
+Branch: `interview-demo/personalized-products`. This branch is separate from Shopify-mapped `main`; no merge into `main` or theme publication has been performed. The CLI-uploaded repository copy is unpublished theme `167193444515` (Interview personalized demo), but it is not GitHub-connected. A copy of the current live theme for rollback is unpublished theme `167195410595`.
 
 [Shopify preview](https://code-with-anny.myshopify.com/?preview_theme_id=167193444515) | [Theme editor](https://code-with-anny.myshopify.com/admin/themes/167193444515/editor). Preview currently requires the storefront password.
 
@@ -12,7 +12,7 @@ Branch: `interview-demo/personalized-products`. This branch is separate from Sho
 - Named `product.personalized`, `collection.demo`, and `page.care` templates demonstrate reusable template assignments.
 - `assets/demo.js` enhances native forms; Shopify remains authoritative for inventory, money, cart state, and checkout.
 - `integration-app/` is an independent Node 24 backend using built-in HTTP, fetch, crypto, and SQLite. It has no runtime npm dependencies and needs no paid service.
-- CLI uploads exclude backend/docs/tests through `.shopifyignore`. GitHub sync should use a separate theme-only export/repository as described in the deployment guide.
+- CLI uploads exclude backend/docs/tests through `.shopifyignore`. Shopify's GitHub integration ignores non-theme folders, so the demo branch can be connected directly; see the deployment guide.
 
 ```mermaid
 flowchart LR
@@ -54,7 +54,7 @@ Health: http://127.0.0.1:3001/health . The CLI reads local authentication withou
 
 ## Setup and demonstration
 
-Follow [store setup](docs/store-setup.md), [backend setup](integration-app/README.md), and [deployment](docs/deployment.md). Create the care-guide metaobject definition before configuring the guide. The separate unpublished demo already exists; future pushes should target its confirmed ID instead of creating another copy.
+Follow [store setup](docs/store-setup.md), [backend setup](integration-app/README.md), and [deployment](docs/deployment.md). Create the care-guide metaobject definition before configuring the guide. To publish with GitHub mapping, connect the pushed demo branch in Shopify Admin, which creates a new theme; verify and publish that connected theme, not the CLI-uploaded copy.
 
 Demonstrate: collection filtering -> variant price/image/availability -> two engravings on one variant -> drawer quantities/removal -> test checkout -> webhook inbox -> mock CRM. Use real development-store catalog data and a test payment gateway. The live connected flow awaits store access.
 
