@@ -190,17 +190,17 @@ Status labels:
 
 ## Git, deployment, and maintenance
 
-**Status:** Development branch implemented and verified; store deployment awaiting verification.
+**Status:** Git branch mapping and live theme role implemented and verified; storefront purchase/webhook behavior awaits verification.
 
 **Concept/example:** [deployment guide](deployment.md), `.shopifyignore`, [theme export](../scripts/export-theme.js), [Theme Check report](theme-check-results.json).
 
-**How/why:** Separate branch and duplicate theme protect the mapped main workflow. Backend stays outside Shopify theme directories; a theme-only export prevents GitHub sync contamination. Release/rollback record theme IDs, commits, settings, and shared assignments.
+**How/why:** The connected demo branch deploys theme folders to live theme `167196295331`; Shopify ignores backend/docs folders outside theme structure. A theme-only export remains optional. Prior live and backup themes remain unpublished for rollback. Future theme-code changes need a separate preview branch/theme before merge into this live-connected branch.
 
-**Test/demo:** Review git status/diff and check the export contains only theme folders. Verify mapping in Admin before any release.
+**Test/demo:** Review git status/diff, inspect the live theme's Admin GitHub badge, and confirm `167196295331` has the live role with Shopify CLI. Test real storefront/cart/checkout separately.
 
 **Edge cases:** CLI ignore is not GitHub ignore, merchant edits can conflict with Git, rollback does not undo placed orders or data mutations, and legacy Theme Check remains red.
 
-**Interview:** What is a safe release? A reviewed commit previewed on a confirmed unpublished ID, verified with store tests, backed up, and published only after explicit authorization.
+**Interview:** What is a safe release? Preview on a separate unpublished connected theme, verify with store tests, preserve a rollback theme, then merge into the live branch only with explicit authorization. The initial release was authorized and mapped, but real-store purchase checks remain to be done.
 
 ## Checkout extensions, Functions, and pixels
 

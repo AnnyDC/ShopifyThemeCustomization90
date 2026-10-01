@@ -1,10 +1,10 @@
 # Modernization log
 
-Date: 2026-10-01. Branch: interview-demo/personalized-products. Uploaded to separate unpublished theme 167193444515 after CLI login; no merge into main or theme publication. Storefront password blocks actual rendering/cart verification.
+Date: 2026-10-01. Branch: interview-demo/personalized-products. Initial CLI upload went to unpublished theme `167193444515`. Shopify subsequently connected the branch and published theme `167196295331`; `main` was not merged. Storefront password blocks actual rendering/cart verification.
 
 | Existing state | Change and reason | Evidence/remaining verification |
 | --- | --- | --- |
-| Clean main checkout, no backend | Created separate development branch and integration-app directory | Git status; no push/merge/publication |
+| Clean main checkout, no backend | Created separate development branch and integration-app directory | Branch pushed; no merge into main; connected theme publication verified separately |
 | Committed conflict markers in README | Replaced with project architecture/setup/navigation | Markdown content review |
 | Custom layout comments out landmark/cart/globals and loads six synchronous scripts | Added demo layout with semantic main/skip link, shared section groups and one deferred script | Theme Check reports no demo issues; Chromium fixture checks; Shopify pending |
 | Static HTML header/footer links and mock cart submenu | Demo sections use menus, routes, policies, actual counts, existing icons | Structure checks; real menu/editor verification pending |

@@ -12,7 +12,7 @@ The hero policy is intended for the default product template above the fold. If 
 
 ## Comparable measurement procedure
 
-1. Preview the untouched legacy theme and the unpublished demo using identical products, images, language, currency, apps, and test device.
+1. Preview the former-live legacy theme `136168243363` and current live demo `167196295331` using identical products, images, language, currency, apps, and test device.
 2. Use the same Chrome/Lighthouse versions, viewport, network/CPU throttling, and cache policy. Run at least three times per page and report median results with dates/preview theme IDs.
 3. Test home, collection, and product. Record LCP element/time, CLS contributions, JavaScript transfer/evaluation, request count, and total bytes. Save reports outside theme folders.
 4. For INP use supported interaction measurements/field data; a single Lighthouse navigation score is not proof of field INP. Development-store traffic is unlikely to provide representative field data.

@@ -7,6 +7,6 @@
 5. **Integration (90 seconds):** show raw HMAC before JSON, durable inbox before acknowledgment, retry lease, transformation, and CRM idempotency. Send duplicate mock delivery and inspect one business result; label this mock verification.
 6. **Admin API (60 seconds):** show cursor iterator, material mutation, variables, userErrors, and throttling. State same-organization authentication assumptions and minimum scopes.
 7. **Evidence (45 seconds):** show tests, mobile/desktop fixture screenshots, real-store checklist, and legacy Theme Check findings. Distinguish local mocks from real Shopify tests and avoid invented performance metrics.
-8. **Release (30 seconds):** explain unpublished ID, separate theme-only branch/export, review, explicit publication approval, backup, and rollback.
+8. **Release (30 seconds):** show live theme `167196295331` and its GitHub badge, branch/commit, retained former-live and backup themes, and the separate preview-branch workflow for future changes. Distinguish verified publication from unverified purchase/webhook flow.
 
 Useful questions: Why line properties instead of variants? Why line keys? Why raw body? What if CRM succeeded but acknowledgment failed? What if a section is replaced? What remains unverified? Use the project files and tests to answer each.

@@ -1,8 +1,8 @@
-# Store setup (awaiting authenticated Shopify access)
+# Store setup (catalog and integration verification pending)
 
-Store: `code-with-anny.myshopify.com`. Use test catalog records and a duplicate unpublished theme.
+Store: `code-with-anny.myshopify.com`. Use test catalog records; develop further theme changes on an unpublished preview branch/theme.
 
-Delivered theme: `Interview personalized demo`, ID `167193444515`, role unpublished. [Preview](https://code-with-anny.myshopify.com/?preview_theme_id=167193444515), [editor](https://code-with-anny.myshopify.com/admin/themes/167193444515/editor). The CLI authenticated and uploaded a separate copy of repository theme files. For this delivery skip creation of another duplicate and use this ID. Live theme remains `136168243363`, ShopifyThemeCustomization90/main.
+Delivered theme: live GitHub-connected demo, ID `167196295331`, branch `interview-demo/personalized-products`. [Storefront](https://code-with-anny.myshopify.com/), [editor](https://code-with-anny.myshopify.com/admin/themes/167196295331/editor). The CLI-only demo `167193444515`, former live `136168243363` (`main`), and backup `167195410595` are unpublished. Theme publication does not by itself configure products, custom data, test payments, or the backend.
 
 ## Products, collections, and menus
 
@@ -22,18 +22,17 @@ Delivered theme: `Interview personalized demo`, ID `167193444515`, role unpublis
 
 Create `care_guide` before configuring the guide selector because the schema declares that type. Upload succeeded; definition/entry existence and storefront access remain unverified. The backend updates material values, not definitions.
 
-## Unpublished theme and assignments
+## Live theme configuration and assignments
 
-1. Online Store -> Themes -> mapped theme -> menu -> Duplicate. Name it `Interview personalized demo`; confirm it is not Current theme.
-2. From this repository run `npx.cmd --yes @shopify/cli theme list --store code-with-anny.myshopify.com`. Authenticate through Shopify login if asked. Record the duplicate's ID and unpublished role.
-3. Run `npx.cmd --yes @shopify/cli theme push --store code-with-anny.myshopify.com --theme UNPUBLISHED_THEME_ID`. Replace the ID with the verified duplicate. Do not use allow-live or publish.
-4. Open its Preview link. Default home/product/collection/cart/page templates already use the demo layout, so normal shopping links work without shared resource assignment changes.
-5. Customize -> home -> Demo featured products -> choose `Personalized gifts`, heading/count; configure benefit blocks. Header/footer groups -> choose menus and logo. Product -> engraving limit and care guide. Drawer is a static section.
-6. Online Store -> Pages -> Add page `Care & FAQ`, handle `care-faq`; enter care content. Its default template works. Add FAQ blocks in the duplicate's page section.
-7. Named template preview URLs: `/products/HANDLE?view=personalized&preview_theme_id=ID`, `/collections/personalized-gifts?view=demo&preview_theme_id=ID`, `/pages/care-faq?view=care&preview_theme_id=ID`.
-8. Product/collection/page -> Theme template -> personalized/demo/care is the assignment location. Admin pickers normally reflect published-theme templates, so use the defaults and view URLs while unpublished. Do not publish merely to expose the picker. Make named assignments when templates are available during an authorized release. Assignments are shared store data, not private preview settings.
+1. Online Store -> Themes -> current theme -> confirm the GitHub badge names `ShopifyThemeCustomization90/interview-demo/personalized-products` and the theme ID is `167196295331`.
+2. From this repository run `npx.cmd --yes @shopify/cli theme list --store code-with-anny.myshopify.com`; confirm this ID has the `live` role. Do not push unreviewed code to this branch or theme.
+3. Open the live storefront. Default home/product/collection/cart/page templates use the demo layout, so normal shopping links work without shared resource assignment changes once test catalog data exists.
+4. Customize -> home -> Demo featured products -> choose `Personalized gifts`, heading/count; configure benefit blocks. Header/footer groups -> choose menus and logo. Product -> engraving limit and care guide. Drawer is a static section. Editor saves to the connected live theme can create GitHub commits; pull/review them afterward.
+5. Online Store -> Pages -> Add page `Care & FAQ`, handle `care-faq`; enter care content. Its default template works. Add FAQ blocks in the page section.
+6. Named template URLs: `/products/HANDLE?view=personalized`, `/collections/personalized-gifts?view=demo`, `/pages/care-faq?view=care`.
+7. Product/collection/page -> Theme template -> personalized/demo/care is the assignment location. Assignments are shared store data, not private preview settings.
 
-For active editing run `npx.cmd --yes @shopify/cli theme dev --store code-with-anny.myshopify.com --theme UNPUBLISHED_THEME_ID` and use the returned preview URL.
+For future theme-code editing, create another branch and unpublished GitHub-connected theme, then preview that theme before merging reviewed changes into the live branch.
 
 ## Filters and checkout
 

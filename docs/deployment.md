@@ -2,27 +2,27 @@
 
 Branch: `interview-demo/personalized-products`. Main is reported as Shopify-mapped; mapping has not been independently inspected. The user authorized publication of a GitHub-connected demo theme on 2026-10-01. Do not merge into or push `main`.
 
-Current delivery: CLI login/list succeeded; live theme remains `136168243363`, and CLI-uploaded demo `167193444515` is unpublished and not GitHub-connected. Unpublished rollback copy of the current live theme: `167195410595` (Pre-interview live backup 2026-10-01). No merge into main or theme publication has occurred. Detailed GitHub connection settings still need Admin verification.
+Release record (2026-10-01): live GitHub-connected demo theme `167196295331`, repository `AnnyDC/ShopifyThemeCustomization90`, branch `interview-demo/personalized-products`, reviewed branch tip `9bccf0b`. Shopify CLI confirmed the live role and Git remote confirmed the commit; an Admin screenshot showed the repo/branch badge on the live card. Former live `136168243363` (`main`), CLI-only demo `167193444515`, and pre-release backup `167195410595` are unpublished. No merge into `main`. Storefront/cart/checkout and webhook verification remain outstanding.
 
 ## Review workflow
 
-Run `npm.cmd ci`, `npm.cmd run check`, `npm.cmd test`, and `npx.cmd --yes @shopify/cli theme check`. Review `git diff --check`, template changes, merchant settings, and the manual checklist. Preview with CLI theme dev against the unpublished duplicate or push to its confirmed ID. `.shopifyignore` excludes backend/docs/tests for CLI upload.
+Run `npm.cmd ci`, `npm.cmd run check`, `npm.cmd test`, and `npx.cmd --yes @shopify/cli theme check`. Review `git diff --check`, template changes, merchant settings, and the manual checklist. Since this branch now deploys directly to the live theme, develop future theme-code changes on a new branch connected to an unpublished preview theme; merge into the live-connected branch only after review. `.shopifyignore` excludes backend/docs/tests for CLI upload.
 
 ## GitHub synchronization
 
 Connect the pushed `interview-demo/personalized-products` branch directly. Shopify's GitHub integration ignores folders outside the default theme structure, so `integration-app/`, `docs/`, `scripts/`, and `tests/` remain separate from synchronized theme files. `.shopifyignore` applies to CLI uploads only. `node scripts/export-theme.js` is an optional theme-only artifact for review or a future isolated repository, not a prerequisite for connecting this branch. Keep main's connection intact.
 
-In Shopify Admin, go to Online Store -> Themes -> Theme library -> Add theme -> Connect from GitHub. Choose account `AnnyDC`, repository `ShopifyThemeCustomization90`, and branch `interview-demo/personalized-products`. Shopify creates a **new unpublished theme** with this connection; it does not attach the branch to CLI-uploaded theme `167193444515`. Record the new theme ID, confirm its card shows the exact repo/branch and latest commit, preview it, then publish **that connected theme**. Do not publish the CLI demo when the requirement is a Git-connected live theme. Admin changes to a connected theme commit back to the branch, so pull/review them before later pushes.
+The connected theme was added using Shopify Admin's Import -> Connect from GitHub flow, then published. Shopify created theme `167196295331` rather than attaching the branch to CLI-uploaded theme `167193444515`. Its live card showed the repo/branch badge. Admin changes to a connected theme commit back to the branch, so pull/review them before later pushes.
 
 Admin -> Online Store -> Themes -> connected theme card -> inspect GitHub connection details. Record repo/branch/theme ID rather than inferring mapping from local remotes. A PR should state preview ID, reviewed commit, tests, setup changes, and legacy findings. Keep secrets in environment/CI secret stores.
 
 ## Authorized release
 
-1. Keep the unpublished prior-live backup `167195410595`; record current live ID/commit/settings/template assignments.
-2. Connect the pushed development branch as above, confirm the new unpublished connected theme ID and GitHub card, and ensure custom data definitions and merchant/app-block settings are correct.
+1. Keep the unpublished prior-live backup `167195410595` and former live `136168243363`; record settings/template assignments.
+2. Confirm the live GitHub card and branch tip before later releases. Do not push unreviewed theme-code changes directly to the live-connected branch.
 3. Run purchase, keyboard/mobile, SEO, and webhook checks where store configuration permits; document any unverified behavior explicitly.
-4. With the user's 2026-10-01 publication authorization, publish the verified GitHub-connected theme, not `main` or the CLI-only copy.
-5. Record released theme/commit and observe storefront errors and queue statuses.
+4. For later changes, preview a separate branch/theme, review, then merge into the live-connected branch with explicit release approval.
+5. Observe storefront errors and queue statuses after releases.
 
 ## Rollback and maintenance
 

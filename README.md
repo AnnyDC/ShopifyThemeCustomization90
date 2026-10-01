@@ -2,9 +2,9 @@
 
 A development-store project for Anny's custom Shopify theme: choose a variant, personalize a gift, update an AJAX cart, place a test order, and deliver its personalization to a local mock CRM.
 
-Branch: `interview-demo/personalized-products`. This branch is separate from Shopify-mapped `main`; no merge into `main` or theme publication has been performed. The CLI-uploaded repository copy is unpublished theme `167193444515` (Interview personalized demo), but it is not GitHub-connected. A copy of the current live theme for rollback is unpublished theme `167195410595`.
+Branch: `interview-demo/personalized-products`, connected to live Shopify theme `167196295331` at commit `9bccf0b` (verified 2026-10-01 by Shopify CLI, Git remote, and Admin screenshot). No merge into `main`. The earlier CLI-only demo `167193444515` and pre-release backup `167195410595` remain unpublished.
 
-[Shopify preview](https://code-with-anny.myshopify.com/?preview_theme_id=167193444515) | [Theme editor](https://code-with-anny.myshopify.com/admin/themes/167193444515/editor). Preview currently requires the storefront password.
+[Live storefront](https://code-with-anny.myshopify.com/) | [Connected theme editor](https://code-with-anny.myshopify.com/admin/themes/167196295331/editor). Storefront password and live cart/checkout verification remain outstanding.
 
 ## Architecture
 
@@ -54,9 +54,9 @@ Health: http://127.0.0.1:3001/health . The CLI reads local authentication withou
 
 ## Setup and demonstration
 
-Follow [store setup](docs/store-setup.md), [backend setup](integration-app/README.md), and [deployment](docs/deployment.md). Create the care-guide metaobject definition before configuring the guide. To publish with GitHub mapping, connect the pushed demo branch in Shopify Admin, which creates a new theme; verify and publish that connected theme, not the CLI-uploaded copy.
+Follow [store setup](docs/store-setup.md), [backend setup](integration-app/README.md), and [deployment](docs/deployment.md). The connected demo theme is already published. Create the care-guide metaobject definition before configuring the guide. Future theme-code changes pushed to this branch update the live theme, so use a review/preview branch and theme for further development.
 
-Demonstrate: collection filtering -> variant price/image/availability -> two engravings on one variant -> drawer quantities/removal -> test checkout -> webhook inbox -> mock CRM. Use real development-store catalog data and a test payment gateway. The live connected flow awaits store access.
+Demonstrate: collection filtering -> variant price/image/availability -> two engravings on one variant -> drawer quantities/removal -> test checkout -> webhook inbox -> mock CRM. Use real development-store catalog data and a test payment gateway. Publication and Git mapping are verified; the end-to-end purchase/webhook flow is not yet verified.
 
 ## Learning guides
 

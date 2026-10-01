@@ -16,13 +16,13 @@ Date: 2026-10-01. Local Windows Node 24.18.0.
 
 ## Awaiting verification
 
-Shopify CLI login and theme upload succeeded. Live theme ID is 136168243363 (ShopifyThemeCustomization90/main); the new Interview personalized demo is unpublished ID 167193444515. Browser-control inventory has no connected browser/native app. An isolated real-preview Chromium check was attempted and blocked by storefront password; it did not claim page/cart success. Machine record: storefront-verification.json.
+Shopify CLI login and theme upload succeeded. On 2026-10-01, Shopify CLI confirmed live theme `167196295331`; an Admin screenshot showed its GitHub badge for `ShopifyThemeCustomization90/interview-demo/personalized-products`, and Git remote reported branch tip `9bccf0b`. Former live `136168243363` and CLI-only demo `167193444515` are unpublished. Browser-control inventory has no connected browser/native app. An earlier isolated real-preview Chromium check was blocked by storefront password; it did not claim page/cart success. Machine record: storefront-verification.json.
 
 Configure STOREFRONT_PASSWORD in ignored integration-app/.env locally, then run `node --env-file-if-exists=integration-app/.env scripts/verify-storefront.js` from root. It tests actual Shopify home/collection/product/cart with reversible isolated guest-cart entries and removes them afterward; no checkout is submitted. Set PREVIEW_URL locally to another verified unpublished theme when needed.
 
 Real Liquid rendering, theme editor/metaobject dynamic sources, real Shopify cart/checkout, app installation/client credentials/scopes, live Admin query/mutation/subscriptions, Shopify-signed webhook delivery, and connected personalized test purchase.
 
-Also pending: detailed GitHub connection mapping confirmation (CLI theme name alone is not proof), Safari/Firefox/Edge-specific checks, physical iOS/Android devices, screen reader, and comparative LCP/CLS/INP/Lighthouse measurement. None is marked passed.
+Also pending: Safari/Firefox/Edge-specific checks, physical iOS/Android devices, screen reader, and comparative LCP/CLS/INP/Lighthouse measurement. None is marked passed.
 
 ## Repeat checks
 
