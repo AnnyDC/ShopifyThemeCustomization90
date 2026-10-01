@@ -1,0 +1,9 @@
+integration-app/**
+docs/**
+scripts/**
+tests/**
+package.json
+package-lock.json
+README.md
+theme-export/**
+.env*

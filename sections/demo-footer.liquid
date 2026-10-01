@@ -1,0 +1,5 @@
+<footer class="demo-footer"><div class="demo-width"><strong>{{ shop.name | escape }}</strong>
+  <nav aria-label="{{ 'demo.footer_navigation' | t }}"><ul class="demo-navigation">{% for link in section.settings.menu.links %}<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>{% endfor %}{% for policy in shop.policies %}{% if policy != blank %}<li><a href="{{ policy.url }}">{{ policy.title | escape }}</a></li>{% endif %}{% endfor %}</ul></nav>
+  {% if section.settings.text != blank %}<div>{{ section.settings.text }}</div>{% endif %}<small>&copy; {{ 'now' | date: '%Y' }} {{ shop.name | escape }}</small>
+</div></footer>
+{% schema %}{"name":"Demo footer","settings":[{"type":"link_list","id":"menu","label":"Footer navigation","default":"footer"},{"type":"richtext","id":"text","label":"Footer text","default":"<p>Thoughtful gifts, made personal.</p>"}]}{% endschema %}

@@ -1,0 +1,9 @@
+{% comment %}Parameters: detail_product (Product), guide_fallback (Metaobject). Product guide overrides the section fallback.{% endcomment %}
+{% assign guide = detail_product.metafields.custom.care_guide.value | default: guide_fallback %}
+{% if detail_product.metafields.custom.material != blank or detail_product.metafields.custom.dimensions != blank %}
+  <h2>{{ 'demo.specifications' | t }}</h2><dl class="demo-specifications">
+    {% if detail_product.metafields.custom.material != blank %}<dt>{{ 'demo.material' | t }}</dt><dd>{{ detail_product.metafields.custom.material.value | escape }}</dd>{% endif %}
+    {% if detail_product.metafields.custom.dimensions != blank %}<dt>{{ 'demo.dimensions' | t }}</dt><dd>{{ detail_product.metafields.custom.dimensions.value | escape }}</dd>{% endif %}
+  </dl>
+{% endif %}
+{% if guide != blank %}<details class="demo-guide"><summary>{{ guide.title.value | escape }}</summary>{{ guide.instructions | metafield_tag }}</details>{% endif %}

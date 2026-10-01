@@ -1,0 +1,14 @@
+# Milestone delivery record
+
+Code is on `interview-demo/personalized-products` and uploaded to unpublished theme 167193444515. Storefront password and app/custom-data configuration block remaining real-store verification. No merge into main or theme publication occurred.
+
+| Milestone | Completed code/files | Checks and result | Topics to review | Remaining setup |
+| --- | --- | --- | --- | --- |
+| 1 Foundation | demo layout; header/footer groups; featured/benefits/product/collection/cart/page sections; cards/details/cart snippets; default and named JSON templates; locale/theme settings | 76 structure/schema/translation checks pass; no demo Theme Check findings | Liquid objects/filters/loops/paginate, explicit snippet arguments, schemas/blocks/presets, OS 2.0 groups | Create products/collection/care definitions/menu/page; configure duplicate in editor |
+| 2 Interactions | assets/demo.js; native forms; variant match/price/image/availability/rules; properties; line-key add/change/remove; bundled sections/null fallback | Chromium tests pass with simulated Shopify responses | FormData, locale URLs, customer properties, request locks, server-rendered sections | Verify Shopify AJAX/stock/discount responses and test checkout |
+| 3 Responsive/accessibility | demo.css; semantic labels/landmarks; dialog/focus/status; abortable custom-element listeners | Chromium at 375/768/1440 passes overflow/image checks; Escape/focus and section replacement pass | Grid constraints, focus return, native dialog, alerts/status, lifecycle | Real Liquid pages; screen reader; Safari/Firefox/Edge/device checks |
+| 4 Integration | integration-app/src config/security/database/orders/shopify/server/cli; env example; tests | Seven backend tests pass; running signed mock duplicate -> one completed event/CRM record | Client credentials/scopes, cursors/userErrors/throttle, raw HMAC, durable inbox/lease/idempotency/retry | Same-organization app install/scopes; credentials locally; HTTPS tunnel; subscriptions; real test order |
+| 5 Performance/maintenance | SEO/image loading/demo assets; one Product structured data; README and learning docs; check/export scripts | Nine combined tests and diff check pass; full Theme Check still has 44 errors/52 warnings in untouched legacy files | Image sizing/loading, server rendering, SEO, honest measurement, branch/release/rollback | Comparable storefront metrics; GitHub mapping; authorized theme release |
+| Optional checkout | docs/checkout.md | Conceptual only | Theme versus extensions/Functions/pixels; capability boundaries | Assess actual plan/target/app eligibility |
+
+Detailed validation is in validation.md; legacy findings are in theme-check-results.json. Setup steps are in store-setup.md and integration-app/README.md. Topic guide links each skill to implementation, tradeoffs, demonstration, edge cases, and an interview answer.

@@ -1,104 +1,78 @@
-<<<<<<< HEAD
-# Dawn
+# Personalized Shopify interview demo
 
-[![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)
+A development-store project for Anny's custom Shopify theme: choose a variant, personalize a gift, update an AJAX cart, place a test order, and deliver its personalization to a local mock CRM.
 
-[Getting started](#getting-started) |
-[Staying up to date with Dawn changes](#staying-up-to-date-with-dawn-changes) |
-[Developer tools](#developer-tools) |
-[Contributing](#contributing) |
-[Code of conduct](#code-of-conduct) |
-[Theme Store submission](#theme-store-submission) |
-[License](#license)
+Branch: `interview-demo/personalized-products`. This branch is separate from Shopify-mapped `main`; no merge into `main` or theme publication has been performed. The repository copy is uploaded as unpublished theme `167193444515` (Interview personalized demo).
 
-Dawn represents a HTML-first, JavaScript-only-as-needed approach to theme development. It's Shopify's first source available theme with performance, flexibility, and [Online Store 2.0 features](https://www.shopify.com/partners/blog/shopify-online-store) built-in and acts as a reference for building Shopify themes.
+[Shopify preview](https://code-with-anny.myshopify.com/?preview_theme_id=167193444515) | [Theme editor](https://code-with-anny.myshopify.com/admin/themes/167193444515/editor). Preview currently requires the storefront password.
 
-* **Web-native in its purest form:** Themes run on the [evergreen web](https://www.w3.org/2001/tag/doc/evergreen-web/). We leverage the latest web browsers to their fullest, while maintaining support for the older ones through progressive enhancement—not polyfills.
-* **Lean, fast, and reliable:** Functionality and design defaults to “no” until it meets this requirement. Code ships on quality. Themes must be built with purpose. They shouldn’t support each and every feature in Shopify.
-* **JavaScript not required, fails gracefully:** We extract every bit of speed and functionality out of HTTP, semantic HTML, and CSS before writing our first line of JavaScript. JavaScript can only be used to progressively enhance features.
-* **Server-rendered:** HTML must be rendered by Shopify servers using Liquid. Business logic and platform primitives such as translations and money formatting don’t belong on the client. Async and on-demand rendering of parts of the page is OK, but we do it sparingly as a progressive enhancement.
-* **Functional, not pixel-perfect:** The Web doesn’t require each page to be rendered pixel-perfect by each browser engine. Using semantic markup, progressive enhancement, and clever design, we ensure that themes remain functional regardless of the browser.
+## Architecture
 
-You can find a more detailed version of our theme code principles in the [contribution guide](https://github.com/Shopify/dawn/blob/main/.github/CONTRIBUTING.md#theme-code-principles).
+- Preserved Dawn-derived/ShopUS sections remain available for comparison. Default home/product/collection/cart/page templates use `layout/demo.liquid` and `sections/demo-*.liquid`.
+- Named `product.personalized`, `collection.demo`, and `page.care` templates demonstrate reusable template assignments.
+- `assets/demo.js` enhances native forms; Shopify remains authoritative for inventory, money, cart state, and checkout.
+- `integration-app/` is an independent Node 24 backend using built-in HTTP, fetch, crypto, and SQLite. It has no runtime npm dependencies and needs no paid service.
+- CLI uploads exclude backend/docs/tests through `.shopifyignore`. GitHub sync should use a separate theme-only export/repository as described in the deployment guide.
 
-## Getting started
-We recommend using Dawn as a starting point for theme development. [Learn more on Shopify.dev](https://shopify.dev/themes/getting-started/create).
-
-> If you're building a theme for the Shopify Theme Store, then you can use Dawn as a starting point. However, the theme that you submit needs to be [substantively different from Dawn](https://shopify.dev/themes/store/requirements#uniqueness) so that it provides added value for merchants. Learn about the [ways that you can use Dawn](https://shopify.dev/themes/tools/dawn#ways-to-use-dawn).
-
-Please note that the main branch may include code for features not yet released. The "stable" version of Dawn is available in the theme store.
-
-## Staying up to date with Dawn changes
-
-Say you're building a new theme off Dawn but you still want to be able to pull in the latest changes, you can add a remote `upstream` pointing to this Dawn repository.
-
-1. Navigate to your local theme folder.
-2. Verify the list of remotes and validate that you have both an `origin` and `upstream`:
-```sh
-git remote -v
-```
-3. If you don't see an `upstream`, you can add one that points to Shopify's Dawn repository:
-```sh
-git remote add upstream https://github.com/Shopify/dawn.git
-```
-4. Pull in the latest Dawn changes into your repository:
-```sh
-git fetch upstream
-git pull upstream main
+```mermaid
+flowchart LR
+  Product[Product + personalization] --> Cart[Shopify AJAX cart]
+  Cart --> Checkout[Test checkout]
+  Checkout --> Webhook[orders/create + raw HMAC]
+  Webhook --> Inbox[SQLite durable inbox]
+  Inbox --> Worker[Retry worker]
+  Worker --> CRM[Mock CRM + order idempotency]
 ```
 
-## Developer tools
+## Local checks
 
-There are a number of really useful tools that the Shopify Themes team uses during development. Dawn is already set up to work with these tools.
+From the root, use npm.cmd on Windows where npm.ps1 is blocked:
 
-### Shopify CLI
-
-[Shopify CLI](https://github.com/Shopify/shopify-cli) helps you build Shopify themes faster and is used to automate and enhance your local development workflow. It comes bundled with a suite of commands for developing Shopify themes—everything from working with themes on a Shopify store (e.g. creating, publishing, deleting themes) or launching a development server for local theme development.
-
-You can follow this [quick start guide for theme developers](https://shopify.dev/docs/themes/tools/cli) to get started.
-
-### Theme Check
-
-We recommend using [Theme Check](https://github.com/shopify/theme-check) as a way to validate and lint your Shopify themes.
-
-We've added Theme Check to Dawn's [list of VS Code extensions](/.vscode/extensions.json) so if you're using Visual Studio Code as your code editor of choice, you'll be prompted to install the [Theme Check VS Code](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode) extension upon opening VS Code after you've forked and cloned Dawn.
-
-You can also run it from a terminal with the following Shopify CLI command:
-
-```bash
-shopify theme check
+```powershell
+npm.cmd ci
+npx.cmd playwright install chromium
+npm.cmd run check
+npm.cmd test
+npx.cmd --yes @shopify/cli theme check
 ```
 
-### Continuous Integration
+Backend, from `integration-app`:
 
-Dawn uses [GitHub Actions](https://github.com/features/actions) to maintain the quality of the theme. [This is a starting point](https://github.com/Shopify/dawn/blob/main/.github/workflows/ci.yml) and what we suggest to use in order to ensure you're building better themes. Feel free to build off of it!
+```powershell
+node src/setup-local.js
+npm.cmd start
+```
 
-#### Shopify/lighthouse-ci-action
+In another terminal in that directory:
 
-We love fast websites! Which is why we created [Shopify/lighthouse-ci-action](https://github.com/Shopify/lighthouse-ci-action). This runs a series of [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) audits for the home, product and collections pages on a store to ensure code that gets added doesn't degrade storefront performance over time.
+```powershell
+npm.cmd run demo
+npm.cmd run inspect
+```
 
-#### Shopify/theme-check-action
+Health: http://127.0.0.1:3001/health . The CLI reads local authentication without printing tokens. Mock demo sends one signed simulated test order twice; inspection shows inbox results and CRM personalization. This does not prove Shopify checkout, authentication, or real webhook delivery.
 
-Dawn runs [Theme Check](#Theme-Check) on every commit via [Shopify/theme-check-action](https://github.com/Shopify/theme-check-action).
+## Setup and demonstration
 
-## Contributing
+Follow [store setup](docs/store-setup.md), [backend setup](integration-app/README.md), and [deployment](docs/deployment.md). Create the care-guide metaobject definition before configuring the guide. The separate unpublished demo already exists; future pushes should target its confirmed ID instead of creating another copy.
 
-Want to make commerce better for everyone by contributing to Dawn? We'd love your help! Please read our [contributing guide](https://github.com/Shopify/dawn/blob/main/.github/CONTRIBUTING.md) to learn about our development process, how to propose bug fixes and improvements, and how to build for Dawn.
+Demonstrate: collection filtering -> variant price/image/availability -> two engravings on one variant -> drawer quantities/removal -> test checkout -> webhook inbox -> mock CRM. Use real development-store catalog data and a test payment gateway. The live connected flow awaits store access.
 
-## Code of conduct
+## Learning guides
 
-All developers who wish to contribute through code or issues, please first read our [Code of Conduct](https://github.com/Shopify/dawn/blob/main/.github/CODE_OF_CONDUCT.md).
+- [Inspection and architecture](docs/inspection.md)
+- [Topic coverage with code links](docs/topic-coverage.md)
+- [Modernization log](docs/modernization-log.md)
+- [Debugging exercises](docs/debugging.md)
+- [Independent practice](docs/practice.md)
+- [Interview walkthrough](docs/interview-walkthrough.md)
+- [Manual checklist](docs/verification.md)
+- [Performance and SEO](docs/performance.md)
+- [Optional checkout concepts](docs/checkout.md)
+- [Validation results](docs/validation.md)
 
-## Theme Store submission
+Browser tests execute actual demo JavaScript/CSS against simulated Shopify responses; they do not render Liquid in Shopify. Repository-wide Theme Check reports legacy issues separately. No Lighthouse scores or real-store success are claimed.
 
-The [Shopify Theme Store](https://themes.shopify.com/) is the place where Shopify merchants find the themes that they'll use to showcase and support their business. As a theme partner, you can create themes for the Shopify Theme Store and reach an international audience of an ever-growing number of entrepreneurs.
+Use ordinary one-time-purchase products with no more than 250 variants. Selling plans, bundles, high-variant remote selection, multi-store OAuth, and production reconciliation are outside this demo. Storefront character limits are convenience validation, not server authorization. Only orders explicitly marked `test: true` are delivered to the CRM.
 
-Ensure that you follow the list of [theme store requirements](https://shopify.dev/themes/store/requirements) if you're interested in becoming a [Shopify Theme Partner](https://themes.shopify.com/services/themes/guidelines) and building themes for the Shopify platform.
-
-## License
-
-Copyright (c) 2021-present Shopify Inc. See [LICENSE](/LICENSE.md) for further details.
-=======
-"# ShopifyThemeCustomization90" 
->>>>>>> ba78b7dd54484d3127f85310f55a6fe2ab0de4e1
+Original Shopify/Dawn attribution remains in [LICENSE.md](LICENSE.md).

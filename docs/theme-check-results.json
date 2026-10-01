@@ -1,0 +1,1058 @@
+[
+  {
+    "path": "sections/featured-product-alt.liquid",
+    "errors": 1,
+    "warnings": 2,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 27,
+        "start_column": 20,
+        "end_row": 27,
+        "end_column": 100,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "VariableName",
+        "severity": "warning",
+        "start_row": 69,
+        "start_column": 28,
+        "end_row": 69,
+        "end_column": 90,
+        "message": "The variable 'selectedVariant' uses wrong naming format"
+      },
+      {
+        "check": "DeprecatedFilter",
+        "severity": "warning",
+        "start_row": 27,
+        "start_column": 56,
+        "end_row": 27,
+        "end_column": 77,
+        "message": "Deprecated filter 'product_img_url', consider using 'image_url'."
+      }
+    ]
+  },
+  {
+    "path": "sections/footer.liquid",
+    "errors": 1,
+    "warnings": 0,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 137,
+        "start_column": 14,
+        "end_row": 140,
+        "end_column": 15,
+        "message": "Missing width and height attributes on img tag"
+      }
+    ]
+  },
+  {
+    "path": "sections/header.liquid",
+    "errors": 4,
+    "warnings": 4,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 165,
+        "start_column": 22,
+        "end_row": 165,
+        "end_column": 101,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 185,
+        "start_column": 22,
+        "end_row": 185,
+        "end_column": 101,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 205,
+        "start_column": 22,
+        "end_row": 205,
+        "end_column": 101,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 225,
+        "start_column": 22,
+        "end_row": 225,
+        "end_column": 101,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 165,
+        "start_column": 27,
+        "end_row": 165,
+        "end_column": 90,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 185,
+        "start_column": 27,
+        "end_row": 185,
+        "end_column": 90,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 205,
+        "start_column": 27,
+        "end_row": 205,
+        "end_column": 90,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 225,
+        "start_column": 27,
+        "end_row": 225,
+        "end_column": 90,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      }
+    ]
+  },
+  {
+    "path": "sections/main-product.liquid",
+    "errors": 2,
+    "warnings": 0,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 21,
+        "start_column": 20,
+        "end_row": 21,
+        "end_column": 77,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 25,
+        "start_column": 20,
+        "end_row": 25,
+        "end_column": 77,
+        "message": "Missing width and height attributes on img tag"
+      }
+    ]
+  },
+  {
+    "path": "sections/product-brand.liquid",
+    "errors": 1,
+    "warnings": 0,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 16,
+        "start_column": 16,
+        "end_row": 16,
+        "end_column": 76,
+        "message": "Missing width and height attributes on img tag"
+      }
+    ]
+  },
+  {
+    "path": "sections/product-category.liquid",
+    "errors": 1,
+    "warnings": 0,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 24,
+        "start_column": 14,
+        "end_row": 24,
+        "end_column": 76,
+        "message": "Missing width and height attributes on img tag"
+      }
+    ]
+  },
+  {
+    "path": "sections/header-alt.liquid",
+    "errors": 27,
+    "warnings": 28,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 151,
+        "start_column": 22,
+        "end_row": 151,
+        "end_column": 101,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 171,
+        "start_column": 22,
+        "end_row": 171,
+        "end_column": 101,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 191,
+        "start_column": 22,
+        "end_row": 191,
+        "end_column": 101,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 211,
+        "start_column": 22,
+        "end_row": 211,
+        "end_column": 101,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 374,
+        "start_column": 22,
+        "end_row": 374,
+        "end_column": 100,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 394,
+        "start_column": 22,
+        "end_row": 394,
+        "end_column": 96,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 414,
+        "start_column": 22,
+        "end_row": 414,
+        "end_column": 104,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 434,
+        "start_column": 22,
+        "end_row": 434,
+        "end_column": 101,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 454,
+        "start_column": 22,
+        "end_row": 454,
+        "end_column": 96,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 474,
+        "start_column": 22,
+        "end_row": 474,
+        "end_column": 104,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 494,
+        "start_column": 22,
+        "end_row": 494,
+        "end_column": 98,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 514,
+        "start_column": 22,
+        "end_row": 514,
+        "end_column": 96,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 534,
+        "start_column": 22,
+        "end_row": 534,
+        "end_column": 94,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 554,
+        "start_column": 22,
+        "end_row": 554,
+        "end_column": 98,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 574,
+        "start_column": 22,
+        "end_row": 574,
+        "end_column": 96,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 619,
+        "start_column": 24,
+        "end_row": 619,
+        "end_column": 102,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 639,
+        "start_column": 24,
+        "end_row": 639,
+        "end_column": 98,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 659,
+        "start_column": 24,
+        "end_row": 659,
+        "end_column": 106,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 679,
+        "start_column": 24,
+        "end_row": 679,
+        "end_column": 103,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 699,
+        "start_column": 24,
+        "end_row": 699,
+        "end_column": 98,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 719,
+        "start_column": 24,
+        "end_row": 719,
+        "end_column": 106,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 739,
+        "start_column": 24,
+        "end_row": 739,
+        "end_column": 100,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 759,
+        "start_column": 24,
+        "end_row": 759,
+        "end_column": 98,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 779,
+        "start_column": 24,
+        "end_row": 779,
+        "end_column": 96,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 799,
+        "start_column": 24,
+        "end_row": 799,
+        "end_column": 100,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 819,
+        "start_column": 24,
+        "end_row": 819,
+        "end_column": 98,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "ImgWidthAndHeight",
+        "severity": "error",
+        "start_row": 1032,
+        "start_column": 18,
+        "end_row": 1032,
+        "end_column": 88,
+        "message": "Missing width and height attributes on img tag"
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 151,
+        "start_column": 27,
+        "end_row": 151,
+        "end_column": 90,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 171,
+        "start_column": 27,
+        "end_row": 171,
+        "end_column": 90,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 191,
+        "start_column": 27,
+        "end_row": 191,
+        "end_column": 90,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 211,
+        "start_column": 27,
+        "end_row": 211,
+        "end_column": 90,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 374,
+        "start_column": 27,
+        "end_row": 374,
+        "end_column": 87,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 394,
+        "start_column": 27,
+        "end_row": 394,
+        "end_column": 84,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 414,
+        "start_column": 27,
+        "end_row": 414,
+        "end_column": 88,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 434,
+        "start_column": 27,
+        "end_row": 434,
+        "end_column": 85,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 454,
+        "start_column": 27,
+        "end_row": 454,
+        "end_column": 84,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 474,
+        "start_column": 27,
+        "end_row": 474,
+        "end_column": 88,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 494,
+        "start_column": 27,
+        "end_row": 494,
+        "end_column": 85,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 514,
+        "start_column": 27,
+        "end_row": 514,
+        "end_column": 84,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 534,
+        "start_column": 27,
+        "end_row": 534,
+        "end_column": 83,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 554,
+        "start_column": 27,
+        "end_row": 554,
+        "end_column": 85,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 574,
+        "start_column": 27,
+        "end_row": 574,
+        "end_column": 84,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 619,
+        "start_column": 29,
+        "end_row": 619,
+        "end_column": 89,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 639,
+        "start_column": 29,
+        "end_row": 639,
+        "end_column": 86,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 659,
+        "start_column": 29,
+        "end_row": 659,
+        "end_column": 90,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 679,
+        "start_column": 29,
+        "end_row": 679,
+        "end_column": 87,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 699,
+        "start_column": 29,
+        "end_row": 699,
+        "end_column": 86,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 719,
+        "start_column": 29,
+        "end_row": 719,
+        "end_column": 90,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 739,
+        "start_column": 29,
+        "end_row": 739,
+        "end_column": 87,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 759,
+        "start_column": 29,
+        "end_row": 759,
+        "end_column": 86,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 779,
+        "start_column": 29,
+        "end_row": 779,
+        "end_column": 85,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 799,
+        "start_column": 29,
+        "end_row": 799,
+        "end_column": 87,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 819,
+        "start_column": 29,
+        "end_row": 819,
+        "end_column": 86,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 1032,
+        "start_column": 23,
+        "end_row": 1032,
+        "end_column": 77,
+        "message": "Use one of the asset_url filters to serve assets for better performance."
+      },
+      {
+        "check": "UndefinedObject",
+        "severity": "warning",
+        "start_row": 1089,
+        "start_column": 14,
+        "end_row": 1089,
+        "end_column": 29,
+        "message": "Unknown object 'vendor_btn_link' used."
+      }
+    ]
+  },
+  {
+    "path": "sections/hero-banner.liquid",
+    "errors": 1,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "ParserBlockingScript",
+        "severity": "error",
+        "start_row": 87,
+        "start_column": 0,
+        "end_row": 87,
+        "end_column": 91,
+        "message": "Avoid parser blocking scripts by adding `defer` or `async` on this tag"
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 87,
+        "start_column": 8,
+        "end_row": 87,
+        "end_column": 81,
+        "message": "Asset should be served by the Shopify CDN for better performance."
+      }
+    ]
+  },
+  {
+    "path": "snippets/cart-notification.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "OrphanedSnippet",
+        "severity": "warning",
+        "start_row": 0,
+        "start_column": 0,
+        "end_row": 0,
+        "end_column": 1,
+        "message": "This snippet is not referenced by any other files"
+      }
+    ]
+  },
+  {
+    "path": "snippets/header-drawer.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "OrphanedSnippet",
+        "severity": "warning",
+        "start_row": 0,
+        "start_column": 0,
+        "end_row": 0,
+        "end_column": 1,
+        "message": "This snippet is not referenced by any other files"
+      }
+    ]
+  },
+  {
+    "path": "snippets/header-dropdown-menu.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "OrphanedSnippet",
+        "severity": "warning",
+        "start_row": 0,
+        "start_column": 0,
+        "end_row": 0,
+        "end_column": 1,
+        "message": "This snippet is not referenced by any other files"
+      }
+    ]
+  },
+  {
+    "path": "snippets/header-mega-menu.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "OrphanedSnippet",
+        "severity": "warning",
+        "start_row": 0,
+        "start_column": 0,
+        "end_row": 0,
+        "end_column": 1,
+        "message": "This snippet is not referenced by any other files"
+      }
+    ]
+  },
+  {
+    "path": "snippets/header-search.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "OrphanedSnippet",
+        "severity": "warning",
+        "start_row": 0,
+        "start_column": 0,
+        "end_row": 0,
+        "end_column": 1,
+        "message": "This snippet is not referenced by any other files"
+      }
+    ]
+  },
+  {
+    "path": "snippets/icon-account.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "OrphanedSnippet",
+        "severity": "warning",
+        "start_row": 0,
+        "start_column": 0,
+        "end_row": 0,
+        "end_column": 1,
+        "message": "This snippet is not referenced by any other files"
+      }
+    ]
+  },
+  {
+    "path": "snippets/icon-hamburger.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "OrphanedSnippet",
+        "severity": "warning",
+        "start_row": 0,
+        "start_column": 0,
+        "end_row": 0,
+        "end_column": 1,
+        "message": "This snippet is not referenced by any other files"
+      }
+    ]
+  },
+  {
+    "path": "snippets/sale-countdown.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "OrphanedSnippet",
+        "severity": "warning",
+        "start_row": 0,
+        "start_column": 0,
+        "end_row": 0,
+        "end_column": 1,
+        "message": "This snippet is not referenced by any other files"
+      }
+    ]
+  },
+  {
+    "path": "sections/main-list-collections.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "VariableName",
+        "severity": "warning",
+        "start_row": 19,
+        "start_column": 11,
+        "end_row": 19,
+        "end_column": 72,
+        "message": "The variable 'moduloResult' uses wrong naming format"
+      }
+    ]
+  },
+  {
+    "path": "layout/theme.liquid",
+    "errors": 6,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "ParserBlockingScript",
+        "severity": "error",
+        "start_row": 53,
+        "start_column": 4,
+        "end_row": 53,
+        "end_column": 67,
+        "message": "Avoid parser blocking scripts by adding `defer` or `async` on this tag"
+      },
+      {
+        "check": "ParserBlockingScript",
+        "severity": "error",
+        "start_row": 56,
+        "start_column": 4,
+        "end_row": 56,
+        "end_column": 77,
+        "message": "Avoid parser blocking scripts by adding `defer` or `async` on this tag"
+      },
+      {
+        "check": "ParserBlockingScript",
+        "severity": "error",
+        "start_row": 59,
+        "start_column": 4,
+        "end_row": 59,
+        "end_column": 65,
+        "message": "Avoid parser blocking scripts by adding `defer` or `async` on this tag"
+      },
+      {
+        "check": "ParserBlockingScript",
+        "severity": "error",
+        "start_row": 65,
+        "start_column": 4,
+        "end_row": 65,
+        "end_column": 70,
+        "message": "Avoid parser blocking scripts by adding `defer` or `async` on this tag"
+      },
+      {
+        "check": "ParserBlockingScript",
+        "severity": "error",
+        "start_row": 71,
+        "start_column": 4,
+        "end_row": 71,
+        "end_column": 95,
+        "message": "Avoid parser blocking scripts by adding `defer` or `async` on this tag"
+      },
+      {
+        "check": "ParserBlockingScript",
+        "severity": "error",
+        "start_row": 74,
+        "start_column": 4,
+        "end_row": 74,
+        "end_column": 64,
+        "message": "Avoid parser blocking scripts by adding `defer` or `async` on this tag"
+      },
+      {
+        "check": "RemoteAsset",
+        "severity": "warning",
+        "start_row": 71,
+        "start_column": 12,
+        "end_row": 71,
+        "end_column": 85,
+        "message": "Asset should be served by the Shopify CDN for better performance."
+      }
+    ]
+  },
+  {
+    "path": "sections/main-article.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "VariableName",
+        "severity": "warning",
+        "start_row": 100,
+        "start_column": 21,
+        "end_row": 100,
+        "end_column": 66,
+        "message": "The variable 'anchorId' uses wrong naming format"
+      }
+    ]
+  },
+  {
+    "path": "sections/main-search.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "UnusedAssign",
+        "severity": "warning",
+        "start_row": 275,
+        "start_column": 24,
+        "end_row": 275,
+        "end_column": 56,
+        "message": "The variable 'product_settings' is assigned but not used"
+      }
+    ]
+  },
+  {
+    "path": "snippets/facets.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "LiquidComplexity",
+        "severity": "warning",
+        "start_row": 745,
+        "start_column": 32,
+        "end_row": 745,
+        "end_column": 77,
+        "message": "Liquid complexity is 174, which exceeds the maximum of 120. The decision at line 746 pushed it over the limit. Consider simplifying conditional logic, or moving self-contained decision logic into snippets with the render tag."
+      }
+    ]
+  },
+  {
+    "path": "sections/announcement-bar.liquid",
+    "errors": 0,
+    "warnings": 2,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "UndefinedObject",
+        "severity": "warning",
+        "start_row": 33,
+        "start_column": 11,
+        "end_row": 33,
+        "end_column": 35,
+        "message": "Unknown object 'block' used."
+      },
+      {
+        "check": "UndefinedObject",
+        "severity": "warning",
+        "start_row": 22,
+        "start_column": 5,
+        "end_row": 22,
+        "end_column": 29,
+        "message": "Unknown object 'block' used."
+      }
+    ]
+  },
+  {
+    "path": "layout/password.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "UndefinedObject",
+        "severity": "warning",
+        "start_row": 39,
+        "start_column": 35,
+        "end_row": 39,
+        "end_column": 49,
+        "message": "Unknown object 'scheme_classes' used."
+      }
+    ]
+  },
+  {
+    "path": "sections/main-product-dflt.liquid",
+    "errors": 0,
+    "warnings": 1,
+    "unchangedFromOriginal": true,
+    "offenses": [
+      {
+        "check": "UndefinedObject",
+        "severity": "warning",
+        "start_row": 479,
+        "start_column": 126,
+        "end_row": 479,
+        "end_column": 134,
+        "message": "Unknown object 'continue' used."
+      }
+    ]
+  }
+]

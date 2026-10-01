@@ -8,3 +8,11 @@
 ehthumbs.db
 Thumbs.db
 .vscode
+.env
+.env.*
+!.env.example
+node_modules/
+integration-app/data/
+test-results/
+playwright-report/
+theme-export/

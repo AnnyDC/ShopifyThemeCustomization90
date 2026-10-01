@@ -1,4 +1,23 @@
 {
+  "demo": {
+    "navigation": "Main navigation",
+    "footer_navigation": "Footer navigation",
+    "shop": "Shop",
+    "no_products": "No products are available yet.",
+    "view_collection": "View collection",
+    "specifications": "Specifications",
+    "material": "Material",
+    "dimensions": "Dimensions",
+    "variant": "Variant",
+    "engraving": "Engraving (optional)",
+    "gift_message": "Gift message (optional)",
+    "minimum_price": "Minimum price",
+    "maximum_price": "Maximum price",
+    "apply": "Apply",
+    "added": "Item added to your cart.",
+    "updated": "Cart updated.",
+    "request_error": "We could not update your cart. Check your cart before trying again."
+  },
   "general": {
     "password_page": {
       "login_form_heading": "Enter store using password:",

@@ -1465,5 +1465,16 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Personalized demo",
+    "settings": [
+      {
+        "type": "color",
+        "id": "demo_accent",
+        "label": "Button color",
+        "default": "#17644c"
+      }
+    ]
   }
 ]

@@ -1,0 +1,8 @@
+{% comment %}Parameters: card_product (Product), eager (Boolean). Personalization belongs on the product page.{% endcomment %}
+<article class="demo-product-card">
+  <a href="{{ card_product.url }}" class="demo-card-image" tabindex="-1" aria-hidden="true">
+    {% if card_product.featured_image %}{% assign image_loading = 'lazy' %}{% if eager %}{% assign image_loading = 'eager' %}{% endif %}{{ card_product.featured_image | image_url: width: 800 | image_tag: widths: '200,400,600,800', sizes: '(min-width: 1000px) 25vw, (min-width: 600px) 33vw, 50vw', loading: image_loading }}{% else %}{{ 'product-1' | placeholder_svg_tag: 'demo-placeholder' }}{% endif %}
+  </a>
+  <h3><a href="{{ card_product.url }}">{{ card_product.title | escape }}</a></h3><p>{{ card_product.price | money }}{% if card_product.compare_at_price > card_product.price %} <s>{{ card_product.compare_at_price | money }}</s>{% endif %}</p>
+  {% unless card_product.available %}<p>{{ 'products.product.sold_out' | t }}</p>{% endunless %}
+</article>

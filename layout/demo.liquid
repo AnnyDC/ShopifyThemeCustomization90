@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <title>{{ page_title | escape }}{% unless page_title contains shop.name %} - {{ shop.name | escape }}{% endunless %}{% if current_page != 1 %} - {{ current_page }}{% endif %}</title>
+  {% if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
+  {% if settings.favicon %}<link rel="icon" href="{{ settings.favicon | image_url: width: 32 }}">{% endif %}
+  {% render 'meta-tags' %}
+  {{ 'demo.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'demo.js' | asset_url }}" defer></script>
+  {{ content_for_header }}
+</head>
+<body class="demo-store" style="--accent: {{ settings.demo_accent | default: '#17644c' | escape }};">
+  <a class="skip-link" href="#MainContent">{{ 'accessibility.skip_to_text' | t }}</a>
+  {% sections 'demo-header-group' %}
+  <main id="MainContent" tabindex="-1">{{ content_for_layout }}</main>
+  {% sections 'demo-footer-group' %}
+  {% section 'demo-cart-drawer' %}
+  <p id="DemoStatus" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+  {% capture configuration_json %}{"root":{{ routes.root_url | json }},"cart":{{ routes.cart_url | json }},"added":{{ 'demo.added' | t | json }},"updated":{{ 'demo.updated' | t | json }},"error":{{ 'demo.request_error' | t | json }},"add":{{ 'products.product.add_to_cart' | t | json }},"soldOut":{{ 'products.product.sold_out' | t | json }},"unavailable":{{ 'products.product.unavailable' | t | json }}}{% endcapture %}
+  <script type="application/json" id="DemoConfiguration">{{ configuration_json | replace: '<', '\u003c' }}</script>
+</body></html>

@@ -1,0 +1,8 @@
+<header class="demo-header demo-width">
+  <a class="demo-brand" href="{{ routes.root_url }}">{% if section.settings.logo %}{{ section.settings.logo | image_url: width: 360 | image_tag: widths: '180,360', sizes: '180px', loading: 'eager', alt: shop.name }}{% else %}{{ shop.name | escape }}{% endif %}</a>
+  <nav aria-label="{{ 'demo.navigation' | t }}"><ul class="demo-navigation">
+    {% for link in section.settings.menu.links %}<li>{% if link.links != blank %}<details><summary>{{ link.title | escape }}</summary><ul>{% for child in link.links %}<li><a href="{{ child.url }}"{% if child.current %} aria-current="page"{% endif %}>{{ child.title | escape }}</a>{% if child.links != blank %}<ul>{% for grandchild in child.links %}<li><a href="{{ grandchild.url }}">{{ grandchild.title | escape }}</a></li>{% endfor %}</ul>{% endif %}</li>{% endfor %}</ul></details>{% else %}<a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>{% endif %}</li>{% else %}<li><a href="{{ routes.all_products_collection_url }}">{{ 'demo.shop' | t }}</a></li>{% endfor %}
+  </ul></nav>
+  <a href="{{ routes.cart_url }}" data-open-cart class="demo-cart-link">{% render 'icon-cart' %}<span>{{ 'templates.cart.cart' | t }} (<span data-cart-count>{{ cart.item_count }}</span>)</span></a>
+</header>
+{% schema %}{"name":"Demo header","settings":[{"type":"image_picker","id":"logo","label":"Logo"},{"type":"link_list","id":"menu","label":"Navigation","default":"main-menu"}]}{% endschema %}

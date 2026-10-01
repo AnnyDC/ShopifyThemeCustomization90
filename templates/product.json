@@ -1,10 +1,12 @@
 {
+  "layout": "demo",
   "sections": {
     "main": {
-      "type": "main-product"      
-    }    
+      "type": "demo-product",
+      "settings": {}
+    }
   },
   "order": [
-    "main"   
+    "main"
   ]
 }

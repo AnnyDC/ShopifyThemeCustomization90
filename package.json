@@ -1,0 +1,1 @@
+{"name":"shopify-interview-demo","private":true,"type":"module","scripts":{"check":"node scripts/check-theme.js","test":"node --test integration-app/test/*.test.js tests/*.test.js"},"devDependencies":{"@playwright/test":"^1.58.0"}}

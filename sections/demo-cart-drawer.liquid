@@ -1,0 +1,2 @@
+<dialog id="DemoCartDrawer" class="demo-drawer" aria-labelledby="DemoCartTitle"><div class="demo-drawer-heading"><h2 id="DemoCartTitle">{{ 'sections.cart.title' | t }}</h2><button type="button" data-close-cart aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button></div><div data-cart-content data-section-id="{{ section.id }}">{% render 'demo-cart-content', context: 'DemoDrawer' %}</div><p data-cart-error role="alert"></p></dialog>
+{% schema %}{"name":"Demo cart drawer","settings":[]}{% endschema %}

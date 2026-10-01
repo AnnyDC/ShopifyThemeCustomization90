@@ -1,0 +1,12 @@
+{% comment %}Parameters: context (unique String) distinguishes drawer/page IDs. AJAX targets line keys, never variant IDs.{% endcomment %}
+{% if cart.empty? %}<p>{{ 'sections.cart.empty' | t }}</p><a href="{{ routes.all_products_collection_url }}">{{ 'general.continue_shopping' | t }}</a>{% else %}
+<form action="{{ routes.cart_url }}" method="post" data-cart-form><ul class="demo-cart-lines">
+  {% for item in cart.items %}<li class="demo-cart-line" data-line-key="{{ item.key | escape }}">
+    {% if item.image %}<a href="{{ item.url }}" tabindex="-1" aria-hidden="true">{{ item.image | image_url: width: 200 | image_tag: widths: '100,200', sizes: '80px', loading: 'lazy' }}</a>{% endif %}
+    <div><a href="{{ item.url }}">{{ item.product.title | escape }}</a><p>{{ item.variant.title | escape }}</p><dl>{% for property in item.properties %}{% assign first_character = property.first | slice: 0 %}{% if property.last != blank and first_character != '_' %}<dt>{{ property.first | escape }}</dt><dd>{{ property.last | escape }}</dd>{% endif %}{% endfor %}</dl>
+      {% for discount in item.line_level_discount_allocations %}<p>{{ discount.discount_application.title | escape }} (-{{ discount.amount | money }})</p>{% endfor %}
+      <p>{% if item.original_line_price > item.final_line_price %}<s>{{ item.original_line_price | money }}</s> {% endif %}{{ item.final_line_price | money }}</p>
+      <label for="{{ context }}-Quantity-{{ forloop.index }}">{{ 'products.product.quantity.label' | t }}</label><input id="{{ context }}-Quantity-{{ forloop.index }}" name="updates[]" type="number" min="0" step="1" value="{{ item.quantity }}" data-cart-quantity data-key="{{ item.key | escape }}" required><a href="{{ item.url_to_remove }}" data-remove-line data-key="{{ item.key | escape }}" class="demo-remove" aria-label="{{ 'sections.cart.remove_title' | t: title: item.product.title | escape }}">{% render 'icon-remove' %}</a>
+    </div></li>{% endfor %}
+</ul>{% for discount in cart.cart_level_discount_applications %}<p>{{ discount.title | escape }} (-{{ discount.total_allocated_amount | money }})</p>{% endfor %}<p><strong>{{ 'sections.cart.estimated_total' | t }}: {{ cart.total_price | money_with_currency }}</strong></p><button type="submit" name="update">{{ 'sections.cart.update' | t }}</button><button type="submit" name="checkout">{{ 'sections.cart.checkout' | t }}</button></form>
+{% endif %}
